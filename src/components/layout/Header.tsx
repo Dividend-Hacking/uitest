@@ -28,14 +28,15 @@ export function Header() {
   const { currentStyle } = useStyle();
 
   return (
-    <header className="h-16 px-6 flex items-center justify-between border-b border-[var(--border-color)] bg-[var(--card-background)]">
+    <header className="h-16 px-4 md:px-6 flex items-center justify-between border-b border-[var(--border-color)] bg-[var(--card-background)]">
       {/* Left Section - Current Style Info */}
       <div className="flex items-center gap-4">
         <div>
-          <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+          <h2 className="text-base md:text-lg font-semibold text-[var(--text-primary)]">
             {currentStyle.name} Dashboard
           </h2>
-          <p className="text-sm text-[var(--text-tertiary)]">
+          {/* Hide description on mobile to save space */}
+          <p className="hidden sm:block text-sm text-[var(--text-tertiary)]">
             {currentStyle.description}
           </p>
         </div>
@@ -47,7 +48,7 @@ export function Header() {
         <button
           onClick={toggleTheme}
           className={cn(
-            'relative flex items-center gap-2 px-3 py-2 rounded-lg transition-all',
+            'relative flex items-center gap-2 px-2 md:px-3 py-2 rounded-lg transition-all',
             'bg-[var(--background-secondary)] hover:bg-[var(--background-tertiary)]',
             'border border-[var(--border-color)]'
           )}
@@ -69,15 +70,15 @@ export function Header() {
             />
           </div>
 
-          {/* Theme label */}
-          <span className="text-sm font-medium text-[var(--text-secondary)] min-w-[40px]">
+          {/* Theme label - hidden on mobile */}
+          <span className="hidden md:inline text-sm font-medium text-[var(--text-secondary)] min-w-[40px]">
             {isDark ? 'Dark' : 'Light'}
           </span>
 
-          {/* Toggle track */}
+          {/* Toggle track - hidden on mobile */}
           <div
             className={cn(
-              'w-10 h-5 rounded-full relative transition-colors',
+              'hidden md:block w-10 h-5 rounded-full relative transition-colors',
               isDark ? 'bg-indigo-600' : 'bg-gray-300'
             )}
           >
@@ -91,8 +92,8 @@ export function Header() {
           </div>
         </button>
 
-        {/* Divider */}
-        <div className="w-px h-8 bg-[var(--border-color)] mx-2" />
+        {/* Divider - hidden on mobile */}
+        <div className="hidden md:block w-px h-8 bg-[var(--border-color)] mx-2" />
 
         {/* Notification Button */}
         <button
@@ -108,10 +109,10 @@ export function Header() {
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
         </button>
 
-        {/* Settings Button */}
+        {/* Settings Button - hidden on mobile */}
         <button
           className={cn(
-            'p-2 rounded-lg transition-colors',
+            'hidden sm:block p-2 rounded-lg transition-colors',
             'hover:bg-[var(--background-secondary)]',
             'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           )}

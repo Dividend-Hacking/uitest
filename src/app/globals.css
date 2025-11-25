@@ -211,3 +211,31 @@ body {
     background-position: -200% 0;
   }
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+  /* Hide sidebar on mobile - it's replaced by bottom sheet picker */
+  .sidebar {
+    display: none;
+  }
+
+  /* Reduce card padding on mobile */
+  .card,
+  .stats-card {
+    padding: 1rem;
+  }
+}
+
+/* Mobile backdrop fade-in animation */
+.mobile-backdrop {
+  animation: backdropFadeIn 0.2s ease-out;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

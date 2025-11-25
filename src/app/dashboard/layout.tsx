@@ -14,6 +14,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext';
 import { StyleProvider } from '@/contexts/StyleContext';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
+import { MobileStylePicker } from '@/components/layout/MobileStylePicker';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -29,7 +30,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <StyleProvider>
         {/* Main container - full height with flex row layout */}
         <div className="flex min-h-screen bg-[var(--background)]">
-          {/* Fixed Sidebar */}
+          {/* Fixed Sidebar - hidden on mobile via CSS */}
           <Sidebar />
 
           {/* Main Content Area */}
@@ -43,6 +44,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </main>
           </div>
         </div>
+
+        {/* Mobile Style Picker - bottom sheet for mobile navigation */}
+        <MobileStylePicker />
       </StyleProvider>
     </ThemeProvider>
   );
