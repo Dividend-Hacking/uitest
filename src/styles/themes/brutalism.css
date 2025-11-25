@@ -41,15 +41,15 @@
   --border-color: #000000;
   --border-color-strong: #000000;
 
-  /* Status colors - pure, harsh */
+  /* Status colors - colored text on transparent backgrounds */
   --success: #00FF00;
-  --success-bg: #00FF00;
+  --success-bg: transparent;
   --warning: #FFFF00;
-  --warning-bg: #FFFF00;
+  --warning-bg: transparent;
   --error: #FF0000;
-  --error-bg: #FF0000;
+  --error-bg: transparent;
   --info: #0000FF;
-  --info-bg: #0000FF;
+  --info-bg: transparent;
 
   /* Sidebar */
   --sidebar-background: #FFFFFF;
@@ -349,4 +349,35 @@
 [data-style="brutalism"] [class*="percent"] {
   color: var(--text-primary) !important;
   font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   STATUS BADGES & INDICATORS
+   Fix invisible text/icons on colored backgrounds
+   ======================================== */
+
+/* Status badges in tables - black pill with white text */
+[data-style="brutalism"] .rounded-full[class*="bg-"] {
+  background: var(--brutalism-black) !important;
+  color: var(--brutalism-white) !important;
+  border: 2px solid var(--brutalism-black);
+  border-radius: 0 !important;
+}
+
+[data-style="brutalism"][data-theme="dark"] .rounded-full[class*="bg-"] {
+  background: var(--brutalism-white) !important;
+  color: var(--brutalism-black) !important;
+  border-color: var(--brutalism-white);
+}
+
+/* Activity feed icon circles - transparent with border, show the icon */
+[data-style="brutalism"] .rounded-full.flex.items-center.justify-center {
+  background: transparent !important;
+  border: 3px solid var(--border-color);
+}
+
+/* Ensure icons inside activity indicators are visible */
+[data-style="brutalism"] .rounded-full.flex.items-center.justify-center svg {
+  color: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
 }
