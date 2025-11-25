@@ -1,72 +1,72 @@
 /**
  * Monochromatic Blue Theme
  *
- * A single-hue theme using only shades of navy blue.
- * Characterized by professional depth, sophisticated aesthetics,
- * and a cohesive blue palette that creates a calm, focused environment.
+ * A vibrant royal blue theme with lavender accents.
+ * Characterized by electric blue depths and soft periwinkle highlights,
+ * creating a modern, energetic yet sophisticated environment.
  */
 
 /* ========================================
    LIGHT MODE - Monochromatic Blue
    ======================================== */
 [data-style="monochromatic-blue"] {
-  /* Navy blue palette - darkest to lightest */
-  --blue-darkest: #0a1628;
-  --blue-darker: #122244;
-  --blue-dark: #1e3a5f;
-  --blue-medium: #2e5090;
-  --blue-light: #4a7cc9;
-  --blue-lighter: #7aa8e8;
-  --blue-lightest: #bdd4f9;
+  /* Royal blue palette - darkest to lightest */
+  --blue-darkest: #0f1a4e;
+  --blue-darker: #141e61;
+  --blue-dark: #1a2d6d;
+  --blue-medium: #2e4a8f;
+  --blue-light: #4a6cb8;
+  --blue-lighter: #a8b5e8;
+  --blue-lightest: #c7d2fe;
 
-  /* Background colors - distinctly blue */
-  --background: #e8f0fe;
-  --background-secondary: #d4e4fc;
-  --background-tertiary: #bdd4f9;
+  /* Background colors - light lavender/periwinkle */
+  --background: #eef2ff;
+  --background-secondary: #e0e7ff;
+  --background-tertiary: #c7d2fe;
 
-  /* Text colors - navy shades */
-  --text-primary: #1e3a5f;
-  --text-secondary: #3d5a80;
-  --text-tertiary: #6b8cae;
+  /* Text colors - royal blue shades */
+  --text-primary: #1e2a5e;
+  --text-secondary: #3d4a7a;
+  --text-tertiary: #6b7aae;
 
   /* Card styling - clean with blue-tinted shadows */
-  --card-background: #f5f9ff;
-  --card-border: 1px solid #a3c4f3;
-  --card-shadow: 0 2px 4px rgba(30, 58, 95, 0.12);
+  --card-background: #f8faff;
+  --card-border: 1px solid #c7d2fe;
+  --card-shadow: 0 2px 4px rgba(30, 45, 109, 0.10);
   --card-radius: 8px;
 
   /* Interactive states */
-  --hover-overlay: rgba(30, 58, 95, 0.06);
-  --active-overlay: rgba(30, 58, 95, 0.12);
+  --hover-overlay: rgba(30, 45, 109, 0.06);
+  --active-overlay: rgba(30, 45, 109, 0.12);
 
   /* Border colors */
-  --border-color: #a3c4f3;
-  --border-color-strong: #7aa8e8;
+  --border-color: #c7d2fe;
+  --border-color-strong: #a8b5e8;
 
-  /* Status colors - all blue shades */
-  --success: #3d5a80;
-  --success-bg: rgba(61, 90, 128, 0.10);
-  --warning: #6b8cae;
-  --warning-bg: rgba(107, 140, 174, 0.10);
-  --error: #1e3a5f;
-  --error-bg: rgba(30, 58, 95, 0.10);
-  --info: #4a6fa5;
-  --info-bg: rgba(74, 111, 165, 0.10);
+  /* Status colors - all blue/lavender shades */
+  --success: #3d4a7a;
+  --success-bg: rgba(61, 74, 122, 0.10);
+  --warning: #6b7aae;
+  --warning-bg: rgba(107, 122, 174, 0.10);
+  --error: #1e2a5e;
+  --error-bg: rgba(30, 42, 94, 0.10);
+  --info: #4a6cb8;
+  --info-bg: rgba(74, 108, 184, 0.10);
 
   /* Sidebar */
-  --sidebar-background: #d4e4fc;
-  --sidebar-item-hover: rgba(30, 80, 144, 0.10);
-  --sidebar-item-active: rgba(30, 80, 144, 0.20);
+  --sidebar-background: #dde4ff;
+  --sidebar-item-hover: rgba(30, 45, 109, 0.08);
+  --sidebar-item-active: rgba(30, 45, 109, 0.18);
   --sidebar-text: var(--text-secondary);
   --sidebar-text-active: var(--blue-dark);
 
   /* Charts - 5 distinct blue values */
-  --chart-1: #1e3a5f;
-  --chart-2: #2e5090;
-  --chart-3: #4a7cc9;
-  --chart-4: #7aa8e8;
-  --chart-5: #bdd4f9;
-  --chart-grid: #d4e4fc;
+  --chart-1: #1a2d6d;
+  --chart-2: #2e4a8f;
+  --chart-3: #4a6cb8;
+  --chart-4: #a8b5e8;
+  --chart-5: #c7d2fe;
+  --chart-grid: #e0e7ff;
 
   /* Typography */
   --font-weight-normal: 400;
@@ -78,51 +78,51 @@
    DARK MODE - Monochromatic Blue
    ======================================== */
 [data-style="monochromatic-blue"][data-theme="dark"] {
-  /* Background colors - rich deep navy */
-  --background: #0a1628;
-  --background-secondary: #122244;
-  --background-tertiary: #1a3355;
+  /* Background colors - vibrant royal blue (matching reference) */
+  --background: #0f1a4e;
+  --background-secondary: #1a2d6d;
+  --background-tertiary: #243a7d;
 
-  /* Text colors - light blues */
-  --text-primary: #e8f0fe;
-  --text-secondary: #a3c4f3;
-  --text-tertiary: #7aa8e8;
+  /* Text colors - white and lavender */
+  --text-primary: #ffffff;
+  --text-secondary: #c5d0f5;
+  --text-tertiary: #a8b5e8;
 
   /* Card styling */
-  --card-background: #142244;
-  --card-border: 1px solid #2a4a78;
-  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --card-background: #1e3575;
+  --card-border: 1px solid #3050a0;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
   /* Border colors */
-  --border-color: #2a4a78;
-  --border-color-strong: #3d6090;
+  --border-color: #3050a0;
+  --border-color-strong: #4a6cb8;
 
   /* Interactive states */
-  --hover-overlay: rgba(168, 192, 216, 0.06);
-  --active-overlay: rgba(168, 192, 216, 0.12);
+  --hover-overlay: rgba(197, 208, 245, 0.08);
+  --active-overlay: rgba(197, 208, 245, 0.15);
 
-  /* Status colors - lighter blues for dark mode */
-  --success: #a3c4f3;
-  --success-bg: rgba(163, 196, 243, 0.18);
-  --warning: #7aa8e8;
-  --warning-bg: rgba(122, 168, 232, 0.18);
-  --error: #bdd4f9;
-  --error-bg: rgba(189, 212, 249, 0.18);
-  --info: #a3c4f3;
-  --info-bg: rgba(163, 196, 243, 0.18);
+  /* Status colors - lavender shades for dark mode */
+  --success: #c5d0f5;
+  --success-bg: rgba(197, 208, 245, 0.18);
+  --warning: #a8b5e8;
+  --warning-bg: rgba(168, 181, 232, 0.18);
+  --error: #e0e7ff;
+  --error-bg: rgba(224, 231, 255, 0.18);
+  --info: #c5d0f5;
+  --info-bg: rgba(197, 208, 245, 0.18);
 
   /* Sidebar */
-  --sidebar-background: #122244;
-  --sidebar-item-active: rgba(122, 168, 232, 0.20);
-  --sidebar-text-active: #e8f0fe;
+  --sidebar-background: #141e61;
+  --sidebar-item-active: rgba(168, 181, 232, 0.25);
+  --sidebar-text-active: #ffffff;
 
   /* Charts - inverted for dark mode */
-  --chart-1: #e8f0fe;
-  --chart-2: #a3c4f3;
-  --chart-3: #7aa8e8;
-  --chart-4: #4a7cc9;
-  --chart-5: #2e5090;
-  --chart-grid: #2a4a78;
+  --chart-1: #ffffff;
+  --chart-2: #c5d0f5;
+  --chart-3: #a8b5e8;
+  --chart-4: #4a6cb8;
+  --chart-5: #2e4a8f;
+  --chart-grid: #3050a0;
 }
 
 /* ========================================
