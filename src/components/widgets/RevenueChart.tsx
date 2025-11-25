@@ -90,6 +90,18 @@ const CHART_COLORS: Record<string, { revenue: string; expenses: string; profit: 
     profit: '#81B29A',
     grid: 'rgba(0, 0, 0, 0.08)',
   },
+  monochromatic: {
+    revenue: '#1a1a1a',
+    expenses: '#808080',
+    profit: '#4d4d4d',
+    grid: 'rgba(0, 0, 0, 0.08)',
+  },
+  'monochromatic-blue': {
+    revenue: '#1a2d6d',
+    expenses: '#a8b5e8',
+    profit: '#4a6cb8',
+    grid: 'rgba(30, 45, 109, 0.1)',
+  },
 };
 
 /**
