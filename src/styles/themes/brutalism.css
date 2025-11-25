@@ -22,10 +22,10 @@
   --background-secondary: #F0F0F0;
   --background-tertiary: #E0E0E0;
 
-  /* Text colors */
+  /* Text colors - all pure black for maximum contrast */
   --text-primary: #000000;
   --text-secondary: #000000;
-  --text-tertiary: #444444;
+  --text-tertiary: #000000;
 
   /* Card styling - harsh borders, no radius */
   --card-background: #FFFFFF;
@@ -81,10 +81,10 @@
   --background-secondary: #111111;
   --background-tertiary: #222222;
 
-  /* Text colors - inverted */
+  /* Text colors - all pure white for maximum contrast */
   --text-primary: #FFFFFF;
   --text-secondary: #FFFFFF;
-  --text-tertiary: #CCCCCC;
+  --text-tertiary: #FFFFFF;
 
   /* Card styling */
   --card-background: #000000;
@@ -305,4 +305,48 @@
 [data-style="brutalism"] *:focus-visible {
   outline: 3px solid var(--brutalism-red);
   outline-offset: 2px;
+}
+
+/* ========================================
+   ICON STYLING - Force maximum contrast
+   ======================================== */
+
+/* Force all SVG icons to use primary text color */
+[data-style="brutalism"] svg {
+  color: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
+}
+
+/* Icon containers - stark with borders */
+[data-style="brutalism"] .icon-container {
+  background: transparent !important;
+  border: 2px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Stats card specific styling */
+[data-style="brutalism"] .stats-card svg {
+  color: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
+}
+
+/* Table row icons */
+[data-style="brutalism"] .table-row svg {
+  color: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
+}
+
+/* Activity and notification icons */
+[data-style="brutalism"] .activity-item svg,
+[data-style="brutalism"] .notification-item svg {
+  color: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
+}
+
+/* Percentage and change values */
+[data-style="brutalism"] .change,
+[data-style="brutalism"] .percentage,
+[data-style="brutalism"] [class*="percent"] {
+  color: var(--text-primary) !important;
+  font-weight: var(--font-weight-bold);
 }
