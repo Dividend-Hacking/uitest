@@ -155,13 +155,43 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Stats cards - sharp with blue accent and uppercase label */
+/* Alternating card accent colors - Bauhaus primary colors */
+[data-style="minimal-bauhaus"] .card:nth-child(3n+1) {
+  border-top-color: var(--mb-blue);
+}
+
+[data-style="minimal-bauhaus"] .card:nth-child(3n+2) {
+  border-top-color: var(--mb-red);
+}
+
+[data-style="minimal-bauhaus"] .card:nth-child(3n) {
+  border-top-color: var(--mb-yellow);
+}
+
+/* Stats cards - sharp with alternating Bauhaus color accents */
 [data-style="minimal-bauhaus"] .stats-card {
   background: var(--card-background);
   border: var(--card-border);
   border-radius: var(--card-radius);
   border-top: 2px solid var(--mb-blue);
   padding: 24px;
+}
+
+/* Alternating stats card accent colors */
+[data-style="minimal-bauhaus"] .stats-card:nth-child(4n+1) {
+  border-top-color: var(--mb-blue);
+}
+
+[data-style="minimal-bauhaus"] .stats-card:nth-child(4n+2) {
+  border-top-color: var(--mb-red);
+}
+
+[data-style="minimal-bauhaus"] .stats-card:nth-child(4n+3) {
+  border-top-color: var(--mb-yellow);
+}
+
+[data-style="minimal-bauhaus"] .stats-card:nth-child(4n) {
+  border-top-color: var(--mb-black);
 }
 
 [data-style="minimal-bauhaus"] .stats-card .value {
@@ -209,6 +239,41 @@
   border-color: var(--mb-blue);
 }
 
+/* Danger/Error button - Bauhaus Red */
+[data-style="minimal-bauhaus"] .btn-danger,
+[data-style="minimal-bauhaus"] .btn-error {
+  background: var(--mb-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: background 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .btn-danger:hover,
+[data-style="minimal-bauhaus"] .btn-error:hover {
+  background: #b91c1c;
+}
+
+/* Warning button - Bauhaus Yellow */
+[data-style="minimal-bauhaus"] .btn-warning {
+  background: var(--mb-yellow);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: background 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .btn-warning:hover {
+  background: #d97706;
+  color: white;
+}
+
 /* Badge styles - subtle radius with Bauhaus color variants */
 [data-style="minimal-bauhaus"] .badge {
   background: var(--info-bg);
@@ -239,10 +304,17 @@
   color: var(--error);
 }
 
-/* Table styling - sharp with blue header accent */
+/* Table styling - sharp with Bauhaus tri-color header accent */
 [data-style="minimal-bauhaus"] .table-header {
   background: transparent;
-  border-bottom: 2px solid var(--mb-blue);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    var(--mb-blue) 33%,
+    var(--mb-red) 33%,
+    var(--mb-red) 66%,
+    var(--mb-yellow) 66%
+  ) 1;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
