@@ -20,14 +20,14 @@
 
   /* Background - TRANSPARENT so Tailwind bg-[var(--background)] doesn't interfere */
   /* The actual dark background is set on main element directly */
-  --background: transparent;
+  --background: #1e1b4b;
   --background-secondary: rgba(255, 255, 255, 0.05);
   --background-tertiary: rgba(255, 255, 255, 0.03);
 
-  /* Text colors - white for dark background */
-  --text-primary: #FFFFFF;
-  --text-secondary: rgba(255, 255, 255, 0.85);
-  --text-tertiary: rgba(255, 255, 255, 0.6);
+  /* Text colors - DARK for readability on light backgrounds */
+  --text-primary: #1e1b4b;
+  --text-secondary: #312e81;
+  --text-tertiary: #6b7280;
 
   /* Card styling */
   --card-background: var(--glass-bg);
@@ -54,12 +54,12 @@
   --sidebar-background: rgba(255, 255, 255, 0.08);
   --sidebar-item-hover: rgba(255, 255, 255, 0.1);
   --sidebar-item-active: rgba(255, 255, 255, 0.15);
-  --sidebar-text: rgba(255, 255, 255, 0.8);
-  --sidebar-text-active: #FFFFFF;
+  --sidebar-text: #1e1b4b;
+  --sidebar-text-active: #312e81;
 
   /* Charts */
-  --chart-1: #FFFFFF;
-  --chart-2: rgba(255, 255, 255, 0.7);
+  --chart-1: #1e1b4b;
+  --chart-2: #312e81;
   --chart-3: #06B6D4;
   --chart-4: #EC4899;
   --chart-5: #8B5CF6;
@@ -80,7 +80,7 @@
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
   /* Keep transparent - actual background on main element */
-  --background: transparent;
+  --background: #0f0a1f;
   --background-secondary: rgba(255, 255, 255, 0.03);
   --background-tertiary: rgba(255, 255, 255, 0.02);
 
@@ -199,7 +199,7 @@
 [data-style="glassmorphism"] .stats-card .value {
   font-size: 32px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #1e1b4b;
 }
 
 [data-style="glassmorphism"] .stats-card .label {
@@ -273,7 +273,7 @@
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: #FFFFFF;
+  color: #1e1b4b;
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   font-weight: 600;
@@ -291,7 +291,7 @@
 [data-style="glassmorphism"] .badge {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  color: #FFFFFF;
+  color: #1e1b4b;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   font-size: 11px;
@@ -359,7 +359,7 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: #FFFFFF;
+  color: #1e1b4b;
   transition: all 0.2s ease;
 }
 
