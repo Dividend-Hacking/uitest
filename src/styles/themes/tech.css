@@ -1,0 +1,391 @@
+/**
+ * Tech Theme
+ *
+ * A futuristic, cyberpunk-inspired theme with dark backgrounds and neon accents.
+ * Characterized by glowing effects, grid patterns, and high-tech aesthetics.
+ * This theme creates a cutting-edge, sci-fi atmosphere.
+ */
+
+/* ========================================
+   LIGHT MODE - Tech
+   ======================================== */
+[data-style="tech"] {
+  /* Core colors - neon on dark */
+  --tech-black: #0F172A;
+  --tech-dark: #1E293B;
+  --tech-medium: #334155;
+  --tech-green: #00FF88;
+  --tech-cyan: #00D4FF;
+  --tech-pink: #FF3366;
+  --tech-purple: #A855F7;
+  --tech-yellow: #FACC15;
+
+  /* Background colors - light mode is still dark-ish */
+  --background: #F1F5F9;
+  --background-secondary: #E2E8F0;
+  --background-tertiary: #CBD5E1;
+
+  /* Text colors */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-tertiary: #64748B;
+
+  /* Card styling */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #E2E8F0;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --card-radius: 8px;
+
+  /* Accent glow */
+  --glow-green: 0 0 20px rgba(0, 255, 136, 0.3);
+  --glow-cyan: 0 0 20px rgba(0, 212, 255, 0.3);
+  --glow-pink: 0 0 20px rgba(255, 51, 102, 0.3);
+
+  /* Border colors */
+  --border-color: #E2E8F0;
+  --border-color-strong: #CBD5E1;
+
+  /* Status colors */
+  --success: #00FF88;
+  --success-bg: rgba(0, 255, 136, 0.1);
+  --warning: #FACC15;
+  --warning-bg: rgba(250, 204, 21, 0.1);
+  --error: #FF3366;
+  --error-bg: rgba(255, 51, 102, 0.1);
+  --info: #00D4FF;
+  --info-bg: rgba(0, 212, 255, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: #FFFFFF;
+  --sidebar-item-hover: rgba(0, 255, 136, 0.1);
+  --sidebar-item-active: var(--tech-green);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--tech-black);
+
+  /* Charts */
+  --chart-1: #00FF88;
+  --chart-2: #00D4FF;
+  --chart-3: #FF3366;
+  --chart-4: #A855F7;
+  --chart-5: #FACC15;
+  --chart-grid: rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   DARK MODE - Tech (This is the primary mode)
+   ======================================== */
+[data-style="tech"][data-theme="dark"] {
+  /* Background colors - true dark tech */
+  --background: #0F172A;
+  --background-secondary: #1E293B;
+  --background-tertiary: #334155;
+
+  /* Text colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #94A3B8;
+
+  /* Card styling - dark with subtle glow */
+  --card-background: #1E293B;
+  --card-border: 1px solid rgba(0, 255, 136, 0.2);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), var(--glow-green);
+
+  /* Border colors */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color-strong: rgba(0, 255, 136, 0.3);
+
+  /* Sidebar */
+  --sidebar-background: #1E293B;
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--tech-black);
+
+  /* Charts */
+  --chart-grid: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   COMPONENT STYLES - Tech
+   ======================================== */
+
+/* Cards - sleek with glow effects */
+[data-style="tech"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+[data-style="tech"][data-theme="dark"] .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--tech-green), var(--tech-cyan), var(--tech-pink));
+}
+
+[data-style="tech"] .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--tech-green);
+}
+
+[data-style="tech"][data-theme="dark"] .card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 136, 0.2);
+}
+
+/* Stats cards with neon accents */
+[data-style="tech"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card:nth-child(1)::after {
+  background: var(--tech-green);
+  box-shadow: var(--glow-green);
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card:nth-child(2)::after {
+  background: var(--tech-pink);
+  box-shadow: var(--glow-pink);
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card:nth-child(3)::after {
+  background: var(--tech-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card:nth-child(4)::after {
+  background: var(--tech-purple);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+[data-style="tech"] .stats-card .value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: -0.02em;
+}
+
+[data-style="tech"][data-theme="dark"] .stats-card .value {
+  color: var(--tech-green);
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* Buttons - tech style */
+[data-style="tech"] .btn-primary {
+  background: var(--tech-green);
+  color: var(--tech-black);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+[data-style="tech"][data-theme="dark"] .btn-primary {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+[data-style="tech"] .btn-primary:hover {
+  background: var(--tech-cyan);
+  transform: translateY(-1px);
+}
+
+[data-style="tech"][data-theme="dark"] .btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+[data-style="tech"] .btn-secondary {
+  background: transparent;
+  color: var(--tech-green);
+  border: 1px solid var(--tech-green);
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+[data-style="tech"] .btn-secondary:hover {
+  background: rgba(0, 255, 136, 0.1);
+}
+
+/* Badge styles - glowing */
+[data-style="tech"] .badge {
+  background: rgba(0, 255, 136, 0.2);
+  color: var(--tech-green);
+  border: 1px solid var(--tech-green);
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-style="tech"][data-theme="dark"] .badge {
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+[data-style="tech"] .badge-error {
+  background: rgba(255, 51, 102, 0.2);
+  color: var(--tech-pink);
+  border-color: var(--tech-pink);
+}
+
+[data-style="tech"] .badge-warning {
+  background: rgba(250, 204, 21, 0.2);
+  color: var(--tech-yellow);
+  border-color: var(--tech-yellow);
+}
+
+/* Table styling - grid-like */
+[data-style="tech"] .table-header {
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--border-color-strong);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+}
+
+[data-style="tech"][data-theme="dark"] .table-header {
+  color: var(--tech-green);
+}
+
+[data-style="tech"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+[data-style="tech"] .table-row:hover {
+  background: rgba(0, 255, 136, 0.05);
+}
+
+[data-style="tech"][data-theme="dark"] .table-row:hover {
+  background: rgba(0, 255, 136, 0.1);
+}
+
+/* Sidebar styling */
+[data-style="tech"] .sidebar {
+  background: var(--sidebar-background);
+  border-right: 1px solid var(--border-color);
+}
+
+[data-style="tech"][data-theme="dark"] .sidebar {
+  border-right-color: rgba(0, 255, 136, 0.2);
+}
+
+[data-style="tech"] .sidebar-item {
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+[data-style="tech"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  color: var(--tech-green);
+}
+
+[data-style="tech"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+}
+
+[data-style="tech"][data-theme="dark"] .sidebar-item-active {
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Input fields */
+[data-style="tech"] .input {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  transition: all 0.2s ease;
+}
+
+[data-style="tech"] .input:focus {
+  border-color: var(--tech-green);
+  outline: none;
+}
+
+[data-style="tech"][data-theme="dark"] .input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Headings with glow */
+[data-style="tech"][data-theme="dark"] h1,
+[data-style="tech"][data-theme="dark"] h2 {
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+/* Scrollbar styling */
+[data-style="tech"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-style="tech"] ::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+[data-style="tech"] ::-webkit-scrollbar-thumb {
+  background: var(--tech-green);
+  border-radius: 4px;
+}
+
+[data-style="tech"][data-theme="dark"] ::-webkit-scrollbar-thumb {
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* Grid background pattern for dark mode */
+[data-style="tech"][data-theme="dark"] .grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Focus states */
+[data-style="tech"] *:focus-visible {
+  outline: 2px solid var(--tech-green);
+  outline-offset: 2px;
+}
+
+[data-style="tech"][data-theme="dark"] *:focus-visible {
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Neon text utility */
+[data-style="tech"][data-theme="dark"] .neon-text {
+  color: var(--tech-green);
+  text-shadow:
+    0 0 5px var(--tech-green),
+    0 0 10px var(--tech-green),
+    0 0 20px var(--tech-green);
+}

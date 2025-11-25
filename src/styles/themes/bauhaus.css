@@ -1,0 +1,365 @@
+/**
+ * Bauhaus Theme
+ *
+ * A design theme inspired by the Bauhaus art movement (1919-1933).
+ * Characterized by geometric shapes, primary colors (red, blue, yellow),
+ * and functional, structured layouts. This theme creates a bold,
+ * artistic aesthetic rooted in modernist design principles.
+ */
+
+/* ========================================
+   LIGHT MODE - Bauhaus
+   ======================================== */
+[data-style="bauhaus"] {
+  /* Core Bauhaus colors - primary palette */
+  --bauhaus-blue: #1E3A8A;
+  --bauhaus-red: #DC2626;
+  --bauhaus-yellow: #FBBF24;
+  --bauhaus-black: #000000;
+  --bauhaus-white: #FFFFFF;
+  --bauhaus-gray: #6B7280;
+
+  /* Background colors */
+  --background: #F5F5F5;
+  --background-secondary: #EEEEEE;
+  --background-tertiary: #E5E5E5;
+
+  /* Text colors */
+  --text-primary: #000000;
+  --text-secondary: #374151;
+  --text-tertiary: #6B7280;
+
+  /* Card styling - clean geometric */
+  --card-background: #FFFFFF;
+  --card-border: 2px solid #000000;
+  --card-shadow: none;
+  --card-radius: 0;
+
+  /* Border colors */
+  --border-color: #000000;
+  --border-color-strong: #000000;
+
+  /* Status colors - using Bauhaus palette */
+  --success: #16A34A;
+  --success-bg: rgba(22, 163, 74, 0.1);
+  --warning: var(--bauhaus-yellow);
+  --warning-bg: rgba(251, 191, 36, 0.2);
+  --error: var(--bauhaus-red);
+  --error-bg: rgba(220, 38, 38, 0.1);
+  --info: var(--bauhaus-blue);
+  --info-bg: rgba(30, 58, 138, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: var(--bauhaus-blue);
+  --sidebar-item-hover: rgba(255, 255, 255, 0.1);
+  --sidebar-item-active: var(--bauhaus-yellow);
+  --sidebar-text: var(--bauhaus-white);
+  --sidebar-text-active: var(--bauhaus-black);
+
+  /* Charts */
+  --chart-1: var(--bauhaus-blue);
+  --chart-2: var(--bauhaus-red);
+  --chart-3: var(--bauhaus-yellow);
+  --chart-4: #000000;
+  --chart-5: #6B7280;
+  --chart-grid: #E5E5E5;
+}
+
+/* ========================================
+   DARK MODE - Bauhaus
+   ======================================== */
+[data-style="bauhaus"][data-theme="dark"] {
+  /* Background colors */
+  --background: #111111;
+  --background-secondary: #1A1A1A;
+  --background-tertiary: #222222;
+
+  /* Text colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #9CA3AF;
+
+  /* Card styling */
+  --card-background: #1A1A1A;
+  --card-border: 2px solid #FFFFFF;
+
+  /* Border colors */
+  --border-color: #FFFFFF;
+  --border-color-strong: #FFFFFF;
+
+  /* Sidebar - stays blue */
+  --sidebar-background: var(--bauhaus-blue);
+
+  /* Charts */
+  --chart-grid: #333333;
+}
+
+/* ========================================
+   COMPONENT STYLES - Bauhaus
+   ======================================== */
+
+/* Cards - geometric and clean */
+[data-style="bauhaus"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric accent on cards */
+[data-style="bauhaus"] .card::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--bauhaus-red);
+}
+
+[data-style="bauhaus"] .card:nth-child(odd)::before {
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+[data-style="bauhaus"] .card:nth-child(even)::before {
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  background: var(--bauhaus-yellow);
+}
+
+/* Stats cards with colored blocks */
+[data-style="bauhaus"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-style="bauhaus"] .stats-card:nth-child(1) {
+  border-left: 8px solid var(--bauhaus-blue);
+}
+
+[data-style="bauhaus"] .stats-card:nth-child(2) {
+  border-left: 8px solid var(--bauhaus-red);
+}
+
+[data-style="bauhaus"] .stats-card:nth-child(3) {
+  border-left: 8px solid var(--bauhaus-yellow);
+}
+
+[data-style="bauhaus"] .stats-card:nth-child(4) {
+  border-left: 8px solid var(--bauhaus-black);
+}
+
+[data-style="bauhaus"][data-theme="dark"] .stats-card:nth-child(4) {
+  border-left-color: var(--bauhaus-white);
+}
+
+[data-style="bauhaus"] .stats-card .value {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-style="bauhaus"] .stats-card .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Buttons - geometric */
+[data-style="bauhaus"] .btn-primary {
+  background: var(--bauhaus-black);
+  color: var(--bauhaus-white);
+  border: 2px solid var(--bauhaus-black);
+  border-radius: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+[data-style="bauhaus"][data-theme="dark"] .btn-primary {
+  background: var(--bauhaus-white);
+  color: var(--bauhaus-black);
+  border-color: var(--bauhaus-white);
+}
+
+[data-style="bauhaus"] .btn-primary:hover {
+  background: var(--bauhaus-blue);
+  border-color: var(--bauhaus-blue);
+}
+
+[data-style="bauhaus"] .btn-secondary {
+  background: var(--bauhaus-yellow);
+  color: var(--bauhaus-black);
+  border: 2px solid var(--bauhaus-black);
+  border-radius: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-style="bauhaus"] .btn-secondary:hover {
+  background: var(--bauhaus-red);
+  color: var(--bauhaus-white);
+}
+
+/* Badge styles - primary colors */
+[data-style="bauhaus"] .badge {
+  background: var(--bauhaus-blue);
+  color: var(--bauhaus-white);
+  border: none;
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+[data-style="bauhaus"] .badge-success {
+  background: var(--success);
+}
+
+[data-style="bauhaus"] .badge-warning {
+  background: var(--bauhaus-yellow);
+  color: var(--bauhaus-black);
+}
+
+[data-style="bauhaus"] .badge-error {
+  background: var(--bauhaus-red);
+}
+
+/* Table styling - structured grid */
+[data-style="bauhaus"] .table-header {
+  background: var(--bauhaus-black);
+  color: var(--bauhaus-white);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+[data-style="bauhaus"][data-theme="dark"] .table-header {
+  background: var(--bauhaus-blue);
+}
+
+[data-style="bauhaus"] .table-row {
+  border-bottom: 2px solid var(--border-color);
+}
+
+[data-style="bauhaus"] .table-row:hover {
+  background: var(--warning-bg);
+}
+
+/* Sidebar styling - bold blue */
+[data-style="bauhaus"] .sidebar {
+  background: var(--sidebar-background);
+}
+
+[data-style="bauhaus"] .sidebar-item {
+  border-radius: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+[data-style="bauhaus"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  border-left-color: var(--bauhaus-yellow);
+}
+
+[data-style="bauhaus"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  border-left-color: var(--bauhaus-red);
+}
+
+/* Input fields */
+[data-style="bauhaus"] .input {
+  border: 2px solid var(--border-color);
+  border-radius: 0;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+[data-style="bauhaus"] .input:focus {
+  border-color: var(--bauhaus-blue);
+  outline: none;
+}
+
+/* Geometric decorations */
+[data-style="bauhaus"] .geometric-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--bauhaus-red);
+}
+
+[data-style="bauhaus"] .geometric-square {
+  width: 60px;
+  height: 60px;
+  background: var(--bauhaus-blue);
+}
+
+[data-style="bauhaus"] .geometric-triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--bauhaus-yellow);
+}
+
+/* Headings - bold and structured */
+[data-style="bauhaus"] h1,
+[data-style="bauhaus"] h2,
+[data-style="bauhaus"] h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Scrollbar styling */
+[data-style="bauhaus"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-style="bauhaus"] ::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+[data-style="bauhaus"] ::-webkit-scrollbar-thumb {
+  background: var(--bauhaus-blue);
+}
+
+[data-style="bauhaus"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--bauhaus-red);
+}
+
+/* Focus states */
+[data-style="bauhaus"] *:focus-visible {
+  outline: 3px solid var(--bauhaus-yellow);
+  outline-offset: 2px;
+}
+
+/* Dividers - colored lines */
+[data-style="bauhaus"] .divider {
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--bauhaus-red) 33%,
+    var(--bauhaus-yellow) 33%,
+    var(--bauhaus-yellow) 66%,
+    var(--bauhaus-blue) 66%
+  );
+}

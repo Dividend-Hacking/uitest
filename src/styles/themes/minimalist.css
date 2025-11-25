@@ -1,0 +1,285 @@
+/**
+ * Minimalist Theme
+ *
+ * A clean, understated theme with maximum whitespace and subtle accents.
+ * Characterized by thin lines, muted colors, and elegant typography.
+ * This theme creates a calm, professional atmosphere focused on content.
+ */
+
+/* ========================================
+   LIGHT MODE - Minimalist
+   ======================================== */
+[data-style="minimalist"] {
+  /* Primary colors - monochromatic with single accent */
+  --minimalist-black: #1a1a1a;
+  --minimalist-dark: #333333;
+  --minimalist-medium: #666666;
+  --minimalist-light: #999999;
+  --minimalist-lighter: #CCCCCC;
+  --minimalist-accent: #0066FF;
+
+  /* Background colors */
+  --background: #FFFFFF;
+  --background-secondary: #FAFAFA;
+  --background-tertiary: #F5F5F5;
+
+  /* Text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+
+  /* Card styling - ultra subtle */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #EEEEEE;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-radius: 8px;
+
+  /* Interactive states */
+  --hover-overlay: rgba(0, 0, 0, 0.02);
+  --active-overlay: rgba(0, 102, 255, 0.04);
+
+  /* Border colors */
+  --border-color: #EEEEEE;
+  --border-color-strong: #DDDDDD;
+
+  /* Status colors - muted versions */
+  --success: #22C55E;
+  --success-bg: rgba(34, 197, 94, 0.06);
+  --warning: #EAB308;
+  --warning-bg: rgba(234, 179, 8, 0.06);
+  --error: #EF4444;
+  --error-bg: rgba(239, 68, 68, 0.06);
+  --info: #0066FF;
+  --info-bg: rgba(0, 102, 255, 0.06);
+
+  /* Sidebar */
+  --sidebar-background: #FAFAFA;
+  --sidebar-item-hover: rgba(0, 0, 0, 0.03);
+  --sidebar-item-active: rgba(0, 102, 255, 0.08);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--minimalist-accent);
+
+  /* Charts */
+  --chart-1: #1a1a1a;
+  --chart-2: #666666;
+  --chart-3: #0066FF;
+  --chart-4: #999999;
+  --chart-5: #CCCCCC;
+  --chart-grid: #F0F0F0;
+
+  /* Typography */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --letter-spacing: 0.01em;
+}
+
+/* ========================================
+   DARK MODE - Minimalist
+   ======================================== */
+[data-style="minimalist"][data-theme="dark"] {
+  /* Background colors */
+  --background: #111111;
+  --background-secondary: #1A1A1A;
+  --background-tertiary: #222222;
+
+  /* Text colors */
+  --text-primary: #FAFAFA;
+  --text-secondary: #AAAAAA;
+  --text-tertiary: #777777;
+
+  /* Card styling */
+  --card-background: #1A1A1A;
+  --card-border: 1px solid #2A2A2A;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  /* Border colors */
+  --border-color: #2A2A2A;
+  --border-color-strong: #3A3A3A;
+
+  /* Interactive states */
+  --hover-overlay: rgba(255, 255, 255, 0.03);
+  --active-overlay: rgba(0, 102, 255, 0.08);
+
+  /* Sidebar */
+  --sidebar-background: #1A1A1A;
+
+  /* Charts */
+  --chart-grid: #2A2A2A;
+}
+
+/* ========================================
+   COMPONENT STYLES - Minimalist
+   ======================================== */
+
+/* Cards - clean and simple */
+[data-style="minimalist"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+[data-style="minimalist"] .card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Stats cards - minimal styling */
+[data-style="minimalist"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+[data-style="minimalist"] .stats-card .value {
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+[data-style="minimalist"] .stats-card .label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Buttons - understated */
+[data-style="minimalist"] .btn-primary {
+  background: var(--minimalist-black);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: opacity 0.2s ease;
+}
+
+[data-style="minimalist"][data-theme="dark"] .btn-primary {
+  background: #FFFFFF;
+  color: #111111;
+}
+
+[data-style="minimalist"] .btn-primary:hover {
+  opacity: 0.85;
+}
+
+[data-style="minimalist"] .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-strong);
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  transition: background 0.2s ease;
+}
+
+[data-style="minimalist"] .btn-secondary:hover {
+  background: var(--hover-overlay);
+}
+
+/* Badge styles - subtle */
+[data-style="minimalist"] .badge {
+  background: var(--background-tertiary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+/* Table styling - clean lines */
+[data-style="minimalist"] .table-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color-strong);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+[data-style="minimalist"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-style="minimalist"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="minimalist"] .table-row:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar item styles */
+[data-style="minimalist"] .sidebar-item {
+  border-radius: 6px;
+  font-weight: var(--font-weight-normal);
+  transition: background 0.15s ease;
+}
+
+[data-style="minimalist"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+}
+
+[data-style="minimalist"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Input fields */
+[data-style="minimalist"] .input {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+[data-style="minimalist"] .input:focus {
+  border-color: var(--minimalist-accent);
+  outline: none;
+}
+
+/* Dividers - ultra thin */
+[data-style="minimalist"] .divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Links - understated accent */
+[data-style="minimalist"] .link {
+  color: var(--minimalist-accent);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+[data-style="minimalist"] .link:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar styling - minimal */
+[data-style="minimalist"] ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+[data-style="minimalist"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-style="minimalist"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color-strong);
+  border-radius: 3px;
+}
+
+[data-style="minimalist"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--minimalist-light);
+}
+
+/* Focus states - subtle ring */
+[data-style="minimalist"] *:focus-visible {
+  outline: 2px solid var(--minimalist-accent);
+  outline-offset: 2px;
+}

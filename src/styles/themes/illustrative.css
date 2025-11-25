@@ -1,0 +1,427 @@
+/**
+ * Illustrative Theme
+ *
+ * A warm, hand-crafted theme featuring sketchy elements and organic shapes.
+ * Characterized by hand-drawn borders, warm color palettes, and whimsical details.
+ * This theme creates a friendly, approachable, artisanal aesthetic.
+ */
+
+/* ========================================
+   LIGHT MODE - Illustrative
+   ======================================== */
+[data-style="illustrative"] {
+  /* Core colors - warm, earthy palette */
+  --ill-cream: #F5F0E6;
+  --ill-paper: #FBF8F3;
+  --ill-brown: #3D405B;
+  --ill-terra: #E07A5F;
+  --ill-sage: #81B29A;
+  --ill-gold: #F2CC8F;
+  --ill-navy: #3D405B;
+
+  /* Background colors */
+  --background: var(--ill-cream);
+  --background-secondary: var(--ill-paper);
+  --background-tertiary: #EDE8DC;
+
+  /* Text colors */
+  --text-primary: var(--ill-navy);
+  --text-secondary: #5D5F7A;
+  --text-tertiary: #8E90A6;
+
+  /* Card styling - paper-like with sketch border */
+  --card-background: var(--ill-paper);
+  --card-border: 2px solid var(--ill-navy);
+  --card-shadow: 4px 4px 0 var(--ill-navy);
+  --card-radius: 8px;
+
+  /* Border colors */
+  --border-color: var(--ill-navy);
+  --border-color-light: #C5C6D0;
+
+  /* Status colors */
+  --success: var(--ill-sage);
+  --success-bg: rgba(129, 178, 154, 0.2);
+  --warning: var(--ill-gold);
+  --warning-bg: rgba(242, 204, 143, 0.3);
+  --error: var(--ill-terra);
+  --error-bg: rgba(224, 122, 95, 0.2);
+  --info: #6B7FD7;
+  --info-bg: rgba(107, 127, 215, 0.15);
+
+  /* Sidebar */
+  --sidebar-background: var(--ill-paper);
+  --sidebar-item-hover: var(--ill-cream);
+  --sidebar-item-active: var(--ill-terra);
+  --sidebar-text: var(--ill-navy);
+  --sidebar-text-active: var(--ill-paper);
+
+  /* Charts */
+  --chart-1: var(--ill-terra);
+  --chart-2: var(--ill-sage);
+  --chart-3: var(--ill-gold);
+  --chart-4: var(--ill-navy);
+  --chart-5: #6B7FD7;
+  --chart-grid: var(--border-color-light);
+
+  /* Typography - slightly playful */
+  --font-display: 'Georgia', serif;
+}
+
+/* ========================================
+   DARK MODE - Illustrative
+   ======================================== */
+[data-style="illustrative"][data-theme="dark"] {
+  /* Background colors */
+  --background: #2A2D3E;
+  --background-secondary: #353849;
+  --background-tertiary: #404357;
+
+  /* Text colors */
+  --text-primary: var(--ill-cream);
+  --text-secondary: #C5C6D0;
+  --text-tertiary: #9496A8;
+
+  /* Card styling */
+  --card-background: #353849;
+  --card-border: 2px solid var(--ill-cream);
+  --card-shadow: 4px 4px 0 var(--ill-terra);
+
+  /* Border colors */
+  --border-color: var(--ill-cream);
+  --border-color-light: #5D5F7A;
+
+  /* Sidebar */
+  --sidebar-background: #353849;
+  --sidebar-text: var(--ill-cream);
+
+  /* Charts */
+  --chart-grid: #5D5F7A;
+}
+
+/* ========================================
+   COMPONENT STYLES - Illustrative
+   ======================================== */
+
+/* Hand-drawn border effect using SVG filter simulation */
+[data-style="illustrative"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Sketchy corner decorations */
+[data-style="illustrative"] .card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--ill-terra);
+  border-left: 3px solid var(--ill-terra);
+  border-radius: 2px 0 0 0;
+}
+
+[data-style="illustrative"] .card::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 3px solid var(--ill-sage);
+  border-right: 3px solid var(--ill-sage);
+  border-radius: 0 0 2px 0;
+}
+
+[data-style="illustrative"] .card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ill-navy);
+}
+
+/* Stats cards with warm backgrounds */
+[data-style="illustrative"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-style="illustrative"] .stats-card:nth-child(1) {
+  border-color: var(--ill-terra);
+  box-shadow: 4px 4px 0 var(--ill-terra);
+}
+
+[data-style="illustrative"] .stats-card:nth-child(2) {
+  border-color: var(--ill-sage);
+  box-shadow: 4px 4px 0 var(--ill-sage);
+}
+
+[data-style="illustrative"] .stats-card:nth-child(3) {
+  border-color: var(--ill-gold);
+  box-shadow: 4px 4px 0 var(--ill-gold);
+}
+
+[data-style="illustrative"] .stats-card:nth-child(4) {
+  border-color: var(--ill-navy);
+  box-shadow: 4px 4px 0 var(--ill-navy);
+}
+
+[data-style="illustrative"] .stats-card .value {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--ill-navy);
+}
+
+[data-style="illustrative"][data-theme="dark"] .stats-card .value {
+  color: var(--ill-cream);
+}
+
+[data-style="illustrative"] .stats-card .label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+/* Buttons - handcrafted feel */
+[data-style="illustrative"] .btn-primary {
+  background: var(--ill-terra);
+  color: var(--ill-paper);
+  border: 2px solid var(--ill-navy);
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 var(--ill-navy);
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+[data-style="illustrative"] .btn-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ill-navy);
+}
+
+[data-style="illustrative"] .btn-primary:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ill-navy);
+}
+
+[data-style="illustrative"] .btn-secondary {
+  background: var(--ill-paper);
+  color: var(--ill-navy);
+  border: 2px solid var(--ill-navy);
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 var(--ill-sage);
+  transition: all 0.15s ease;
+}
+
+[data-style="illustrative"] .btn-secondary:hover {
+  background: var(--ill-cream);
+}
+
+/* Badge styles - tag-like */
+[data-style="illustrative"] .badge {
+  background: var(--ill-gold);
+  color: var(--ill-navy);
+  border: 2px solid var(--ill-navy);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 2px 2px 0 var(--ill-navy);
+}
+
+[data-style="illustrative"] .badge-success {
+  background: var(--ill-sage);
+  color: var(--ill-paper);
+}
+
+[data-style="illustrative"] .badge-error {
+  background: var(--ill-terra);
+  color: var(--ill-paper);
+}
+
+/* Table styling */
+[data-style="illustrative"] .table-container {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+[data-style="illustrative"] .table-header {
+  background: var(--ill-navy);
+  color: var(--ill-paper);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+[data-style="illustrative"][data-theme="dark"] .table-header {
+  background: var(--ill-terra);
+}
+
+[data-style="illustrative"] .table-row {
+  border-bottom: 1px dashed var(--border-color-light);
+  transition: background 0.2s ease;
+}
+
+[data-style="illustrative"] .table-row:hover {
+  background: var(--ill-cream);
+}
+
+[data-style="illustrative"][data-theme="dark"] .table-row:hover {
+  background: rgba(224, 122, 95, 0.1);
+}
+
+/* Sidebar styling */
+[data-style="illustrative"] .sidebar {
+  background: var(--sidebar-background);
+  border-right: var(--card-border);
+}
+
+[data-style="illustrative"] .sidebar-item {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+[data-style="illustrative"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  padding-left: 4px;
+}
+
+/* Decorative bullet for hover */
+[data-style="illustrative"] .sidebar-item:hover::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: var(--ill-terra);
+  font-size: 18px;
+}
+
+[data-style="illustrative"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  box-shadow: 3px 3px 0 var(--ill-navy);
+}
+
+/* Input fields - notebook style */
+[data-style="illustrative"] .input {
+  background: var(--ill-paper);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+[data-style="illustrative"] .input:focus {
+  outline: none;
+  border-color: var(--ill-terra);
+  box-shadow: 3px 3px 0 var(--ill-terra);
+}
+
+/* Decorative underline for headings */
+[data-style="illustrative"] h1,
+[data-style="illustrative"] h2 {
+  font-family: var(--font-display);
+  position: relative;
+  display: inline-block;
+}
+
+[data-style="illustrative"] h1::after,
+[data-style="illustrative"] h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--ill-terra) 0%,
+    var(--ill-terra) 33%,
+    var(--ill-sage) 33%,
+    var(--ill-sage) 66%,
+    var(--ill-gold) 66%,
+    var(--ill-gold) 100%
+  );
+  border-radius: 2px;
+}
+
+/* Doodle decorations */
+[data-style="illustrative"] .doodle-star::before {
+  content: '✦';
+  color: var(--ill-terra);
+  margin-right: 8px;
+}
+
+[data-style="illustrative"] .doodle-arrow::after {
+  content: ' →';
+  color: var(--ill-sage);
+}
+
+/* Scrollbar styling - pencil-like */
+[data-style="illustrative"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-style="illustrative"] ::-webkit-scrollbar-track {
+  background: var(--ill-cream);
+  border: 1px solid var(--border-color-light);
+  border-radius: 5px;
+}
+
+[data-style="illustrative"] ::-webkit-scrollbar-thumb {
+  background: var(--ill-sage);
+  border: 2px solid var(--ill-navy);
+  border-radius: 5px;
+}
+
+[data-style="illustrative"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--ill-terra);
+}
+
+/* Focus states */
+[data-style="illustrative"] *:focus-visible {
+  outline: 3px dashed var(--ill-terra);
+  outline-offset: 2px;
+}
+
+/* Dividers - decorative */
+[data-style="illustrative"] .divider {
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ill-terra) 0px,
+    var(--ill-terra) 8px,
+    transparent 8px,
+    transparent 12px,
+    var(--ill-sage) 12px,
+    var(--ill-sage) 20px,
+    transparent 20px,
+    transparent 24px,
+    var(--ill-gold) 24px,
+    var(--ill-gold) 32px,
+    transparent 32px,
+    transparent 36px
+  );
+  border-radius: 2px;
+}
+
+/* Paper texture overlay (optional) */
+[data-style="illustrative"] .paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}

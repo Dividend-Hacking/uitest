@@ -1,0 +1,365 @@
+/**
+ * Neobrutalism Theme
+ *
+ * A modern, playful take on brutalism with thick borders, bold shadows, and vibrant colors.
+ * Characterized by hard drop shadows, solid fills, and nostalgic web aesthetics.
+ * This theme creates a fun, approachable yet bold visual identity.
+ */
+
+/* ========================================
+   LIGHT MODE - Neobrutalism
+   ======================================== */
+[data-style="neobrutalism"] {
+  /* Core colors - bold and playful */
+  --nb-black: #000000;
+  --nb-white: #FFFFFF;
+  --nb-yellow: #FEF08A;
+  --nb-yellow-dark: #FDE047;
+  --nb-pink: #F472B6;
+  --nb-pink-light: #FBCFE8;
+  --nb-blue: #60A5FA;
+  --nb-blue-light: #BFDBFE;
+  --nb-green: #4ADE80;
+  --nb-purple: #C084FC;
+  --nb-orange: #FB923C;
+
+  /* Background colors */
+  --background: #FEF9C3;
+  --background-secondary: #FEF08A;
+  --background-tertiary: #FDE047;
+
+  /* Text colors */
+  --text-primary: #000000;
+  --text-secondary: #1F2937;
+  --text-tertiary: #374151;
+
+  /* Card styling - thick borders, hard shadows */
+  --card-background: #FFFFFF;
+  --card-border: 3px solid #000000;
+  --card-shadow: 6px 6px 0 #000000;
+  --card-radius: 0;
+
+  /* Interactive states */
+  --hover-transform: translate(-2px, -2px);
+  --hover-shadow: 8px 8px 0 #000000;
+  --active-transform: translate(2px, 2px);
+  --active-shadow: 4px 4px 0 #000000;
+
+  /* Border colors */
+  --border-color: #000000;
+  --border-width: 3px;
+
+  /* Status colors */
+  --success: #4ADE80;
+  --success-bg: #BBF7D0;
+  --warning: #FBBF24;
+  --warning-bg: #FEF3C7;
+  --error: #F87171;
+  --error-bg: #FECACA;
+  --info: #60A5FA;
+  --info-bg: #BFDBFE;
+
+  /* Sidebar */
+  --sidebar-background: var(--nb-pink-light);
+  --sidebar-item-hover: var(--nb-white);
+  --sidebar-item-active: var(--nb-black);
+  --sidebar-text: var(--nb-black);
+  --sidebar-text-active: var(--nb-white);
+
+  /* Charts */
+  --chart-1: #F472B6;
+  --chart-2: #60A5FA;
+  --chart-3: #4ADE80;
+  --chart-4: #FBBF24;
+  --chart-5: #C084FC;
+  --chart-grid: #000000;
+}
+
+/* ========================================
+   DARK MODE - Neobrutalism
+   ======================================== */
+[data-style="neobrutalism"][data-theme="dark"] {
+  /* Background colors */
+  --background: #1F2937;
+  --background-secondary: #374151;
+  --background-tertiary: #4B5563;
+
+  /* Text colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #F3F4F6;
+  --text-tertiary: #D1D5DB;
+
+  /* Card styling */
+  --card-background: #374151;
+  --card-border: 3px solid #FFFFFF;
+  --card-shadow: 6px 6px 0 var(--nb-yellow);
+
+  /* Adjust hover/active shadows for dark mode */
+  --hover-shadow: 8px 8px 0 var(--nb-yellow);
+  --active-shadow: 4px 4px 0 var(--nb-yellow);
+
+  /* Border colors */
+  --border-color: #FFFFFF;
+
+  /* Sidebar */
+  --sidebar-background: #4B5563;
+  --sidebar-item-active: var(--nb-yellow);
+  --sidebar-text: #FFFFFF;
+  --sidebar-text-active: #000000;
+}
+
+/* ========================================
+   COMPONENT STYLES - Neobrutalism
+   ======================================== */
+
+/* Cards - bold and playful */
+[data-style="neobrutalism"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+[data-style="neobrutalism"] .card:hover {
+  transform: var(--hover-transform);
+  box-shadow: var(--hover-shadow);
+}
+
+[data-style="neobrutalism"] .card:active {
+  transform: var(--active-transform);
+  box-shadow: var(--active-shadow);
+}
+
+/* Stats cards with colored backgrounds */
+[data-style="neobrutalism"] .stats-card {
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+[data-style="neobrutalism"] .stats-card:nth-child(1) {
+  background: var(--nb-yellow);
+}
+
+[data-style="neobrutalism"] .stats-card:nth-child(2) {
+  background: var(--nb-pink-light);
+}
+
+[data-style="neobrutalism"] .stats-card:nth-child(3) {
+  background: var(--nb-blue-light);
+}
+
+[data-style="neobrutalism"] .stats-card:nth-child(4) {
+  background: var(--nb-green);
+}
+
+[data-style="neobrutalism"] .stats-card:hover {
+  transform: var(--hover-transform);
+  box-shadow: var(--hover-shadow);
+}
+
+[data-style="neobrutalism"] .stats-card .value {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--nb-black);
+}
+
+[data-style="neobrutalism"] .stats-card .label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--nb-black);
+}
+
+/* Buttons - chunky and fun */
+[data-style="neobrutalism"] .btn-primary {
+  background: var(--nb-black);
+  color: var(--nb-white);
+  border: 3px solid var(--nb-black);
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  box-shadow: 4px 4px 0 var(--nb-pink);
+  transition: all 0.1s ease;
+}
+
+[data-style="neobrutalism"] .btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--nb-pink);
+}
+
+[data-style="neobrutalism"] .btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--nb-pink);
+}
+
+[data-style="neobrutalism"] .btn-secondary {
+  background: var(--nb-yellow);
+  color: var(--nb-black);
+  border: 3px solid var(--nb-black);
+  border-radius: 0;
+  font-weight: 700;
+  box-shadow: 4px 4px 0 var(--nb-black);
+}
+
+[data-style="neobrutalism"] .btn-secondary:hover {
+  background: var(--nb-yellow-dark);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--nb-black);
+}
+
+/* Badge styles - bold colors */
+[data-style="neobrutalism"] .badge {
+  background: var(--nb-pink);
+  color: var(--nb-black);
+  border: 2px solid var(--nb-black);
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  box-shadow: 2px 2px 0 var(--nb-black);
+}
+
+[data-style="neobrutalism"] .badge-success {
+  background: var(--nb-green);
+}
+
+[data-style="neobrutalism"] .badge-warning {
+  background: var(--nb-orange);
+}
+
+[data-style="neobrutalism"] .badge-info {
+  background: var(--nb-blue);
+}
+
+/* Table styling */
+[data-style="neobrutalism"] .table-header {
+  background: var(--nb-black);
+  color: var(--nb-white);
+  border: var(--card-border);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[data-style="neobrutalism"][data-theme="dark"] .table-header {
+  background: var(--nb-yellow);
+  color: var(--nb-black);
+}
+
+[data-style="neobrutalism"] .table-row {
+  border: 3px solid var(--border-color);
+  border-top: none;
+  background: var(--card-background);
+  transition: background 0.1s ease;
+}
+
+[data-style="neobrutalism"] .table-row:hover {
+  background: var(--nb-yellow);
+}
+
+[data-style="neobrutalism"][data-theme="dark"] .table-row:hover {
+  background: var(--nb-pink);
+}
+
+/* Sidebar styling */
+[data-style="neobrutalism"] .sidebar {
+  background: var(--sidebar-background);
+  border-right: var(--card-border);
+}
+
+[data-style="neobrutalism"] .sidebar-item {
+  border: 3px solid transparent;
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 13px;
+  transition: all 0.1s ease;
+}
+
+[data-style="neobrutalism"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  border-color: var(--border-color);
+  box-shadow: 4px 4px 0 var(--border-color);
+  transform: translate(-2px, -2px);
+}
+
+[data-style="neobrutalism"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  border-color: var(--border-color);
+  box-shadow: 4px 4px 0 var(--nb-pink);
+}
+
+/* Input fields */
+[data-style="neobrutalism"] .input {
+  border: 3px solid var(--border-color);
+  border-radius: 0;
+  font-weight: 500;
+  transition: box-shadow 0.1s ease;
+}
+
+[data-style="neobrutalism"] .input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0 var(--nb-pink);
+}
+
+/* Headings */
+[data-style="neobrutalism"] h1,
+[data-style="neobrutalism"] h2,
+[data-style="neobrutalism"] h3 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Links */
+[data-style="neobrutalism"] .link {
+  color: var(--nb-black);
+  text-decoration: none;
+  background: linear-gradient(var(--nb-yellow), var(--nb-yellow)) no-repeat;
+  background-size: 100% 40%;
+  background-position: 0 90%;
+  transition: background-size 0.2s ease;
+}
+
+[data-style="neobrutalism"] .link:hover {
+  background-size: 100% 100%;
+}
+
+/* Scrollbar styling */
+[data-style="neobrutalism"] ::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+[data-style="neobrutalism"] ::-webkit-scrollbar-track {
+  background: var(--nb-yellow);
+  border: 3px solid var(--border-color);
+}
+
+[data-style="neobrutalism"] ::-webkit-scrollbar-thumb {
+  background: var(--nb-pink);
+  border: 3px solid var(--border-color);
+}
+
+[data-style="neobrutalism"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--nb-purple);
+}
+
+/* Focus states */
+[data-style="neobrutalism"] *:focus-visible {
+  outline: 3px solid var(--nb-blue);
+  outline-offset: 2px;
+}
+
+/* Dividers */
+[data-style="neobrutalism"] .divider {
+  height: 3px;
+  background: var(--border-color);
+}

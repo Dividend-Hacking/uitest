@@ -1,0 +1,232 @@
+/**
+ * Chromatic Theme
+ *
+ * A vibrant, colorful theme featuring bold gradients and dynamic color transitions.
+ * Characterized by rainbow-like color schemes, animated gradients, and high saturation.
+ * This theme creates an energetic, modern feel with its multi-color approach.
+ */
+
+/* ========================================
+   LIGHT MODE - Chromatic
+   ======================================== */
+[data-style="chromatic"] {
+  /* Primary gradient colors */
+  --chromatic-red: #FF6B6B;
+  --chromatic-orange: #FFA94D;
+  --chromatic-yellow: #FFE66D;
+  --chromatic-green: #4ECDC4;
+  --chromatic-blue: #45B7D1;
+  --chromatic-purple: #9B59B6;
+  --chromatic-pink: #F06292;
+
+  /* Background colors */
+  --background: #FFFFFF;
+  --background-secondary: #F8FAFC;
+  --background-tertiary: #F1F5F9;
+
+  /* Text colors */
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-tertiary: #94A3B8;
+
+  /* Gradient definitions */
+  --gradient-primary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 50%, #FFE66D 100%);
+  --gradient-secondary: linear-gradient(135deg, #45B7D1 0%, #9B59B6 100%);
+  --gradient-accent: linear-gradient(135deg, #F06292 0%, #FFA94D 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+
+  /* Card styling */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-radius: 16px;
+
+  /* Interactive states */
+  --hover-overlay: rgba(255, 107, 107, 0.08);
+  --active-overlay: rgba(78, 205, 196, 0.12);
+
+  /* Border colors */
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-color-strong: rgba(0, 0, 0, 0.15);
+
+  /* Status colors with gradient hints */
+  --success: #10B981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --warning: #F59E0B;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --error: #EF4444;
+  --error-bg: rgba(239, 68, 68, 0.1);
+  --info: #3B82F6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  --sidebar-item-hover: var(--hover-overlay);
+  --sidebar-item-active: var(--gradient-primary);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: #FFFFFF;
+
+  /* Charts */
+  --chart-1: #FF6B6B;
+  --chart-2: #4ECDC4;
+  --chart-3: #FFE66D;
+  --chart-4: #45B7D1;
+  --chart-5: #9B59B6;
+  --chart-grid: rgba(0, 0, 0, 0.06);
+}
+
+/* ========================================
+   DARK MODE - Chromatic
+   ======================================== */
+[data-style="chromatic"][data-theme="dark"] {
+  /* Background colors - darker but still vibrant */
+  --background: #0F172A;
+  --background-secondary: #1E293B;
+  --background-tertiary: #334155;
+
+  /* Text colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #94A3B8;
+
+  /* Adjusted gradients for dark mode */
+  --gradient-card: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(78, 205, 196, 0.15) 100%);
+
+  /* Card styling */
+  --card-background: #1E293B;
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  /* Border colors */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-strong: rgba(255, 255, 255, 0.15);
+
+  /* Sidebar */
+  --sidebar-background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+  --sidebar-text: var(--text-secondary);
+
+  /* Charts */
+  --chart-grid: rgba(255, 255, 255, 0.08);
+}
+
+/* ========================================
+   COMPONENT STYLES - Chromatic
+   ======================================== */
+
+/* Cards with gradient border effect */
+[data-style="chromatic"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-style="chromatic"] .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+[data-style="chromatic"] .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Stats cards with gradient backgrounds */
+[data-style="chromatic"] .stats-card {
+  background: var(--gradient-card);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  transition: transform 0.3s ease;
+}
+
+[data-style="chromatic"] .stats-card:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons with gradient */
+[data-style="chromatic"] .btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-style="chromatic"] .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Badge styles */
+[data-style="chromatic"] .badge {
+  background: var(--gradient-secondary);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Table styling */
+[data-style="chromatic"] .table-header {
+  background: var(--background-secondary);
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary)),
+    var(--gradient-primary);
+  background-origin: padding-box, border-box;
+}
+
+[data-style="chromatic"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+/* Sidebar item active state */
+[data-style="chromatic"] .sidebar-item-active {
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 12px;
+}
+
+/* Input fields */
+[data-style="chromatic"] .input {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-style="chromatic"] .input:focus {
+  border-color: var(--chromatic-green);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+}
+
+/* Scrollbar styling */
+[data-style="chromatic"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-style="chromatic"] ::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 4px;
+}
+
+[data-style="chromatic"] ::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+/* Animation for gradient text */
+[data-style="chromatic"] .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

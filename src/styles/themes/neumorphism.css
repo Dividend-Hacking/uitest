@@ -1,0 +1,401 @@
+/**
+ * Neumorphism Theme
+ *
+ * A soft, modern theme featuring extruded UI elements with subtle shadows.
+ * Characterized by monochromatic colors, soft shadows, and 3D-like effects.
+ * This theme creates a tactile, physical feel through careful shadow manipulation.
+ */
+
+/* ========================================
+   LIGHT MODE - Neumorphism
+   ======================================== */
+[data-style="neumorphism"] {
+  /* Base color - everything derives from this */
+  --nm-base: #E0E5EC;
+  --nm-base-dark: #D1D9E6;
+  --nm-base-darker: #C2CBDA;
+
+  /* Shadow colors */
+  --nm-shadow-dark: #A3B1C6;
+  --nm-shadow-light: #FFFFFF;
+
+  /* Accent color - used sparingly */
+  --nm-accent: #6366F1;
+  --nm-accent-light: #818CF8;
+
+  /* Background colors */
+  --background: var(--nm-base);
+  --background-secondary: var(--nm-base-dark);
+  --background-tertiary: var(--nm-base-darker);
+
+  /* Text colors */
+  --text-primary: #2D3748;
+  --text-secondary: #4A5568;
+  --text-tertiary: #718096;
+
+  /* Card styling - soft extrusion */
+  --card-background: var(--nm-base);
+  --card-border: none;
+  --card-shadow:
+    8px 8px 16px var(--nm-shadow-dark),
+    -8px -8px 16px var(--nm-shadow-light);
+  --card-shadow-inset:
+    inset 4px 4px 8px var(--nm-shadow-dark),
+    inset -4px -4px 8px var(--nm-shadow-light);
+  --card-radius: 20px;
+
+  /* Button shadows */
+  --btn-shadow:
+    6px 6px 12px var(--nm-shadow-dark),
+    -6px -6px 12px var(--nm-shadow-light);
+  --btn-shadow-pressed:
+    inset 4px 4px 8px var(--nm-shadow-dark),
+    inset -4px -4px 8px var(--nm-shadow-light);
+
+  /* Border colors */
+  --border-color: transparent;
+  --border-color-strong: var(--nm-base-darker);
+
+  /* Status colors */
+  --success: #10B981;
+  --success-bg: var(--nm-base);
+  --warning: #F59E0B;
+  --warning-bg: var(--nm-base);
+  --error: #EF4444;
+  --error-bg: var(--nm-base);
+  --info: var(--nm-accent);
+  --info-bg: var(--nm-base);
+
+  /* Sidebar */
+  --sidebar-background: var(--nm-base);
+  --sidebar-item-hover: var(--nm-base-dark);
+  --sidebar-item-active: var(--nm-accent);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: #FFFFFF;
+
+  /* Charts */
+  --chart-1: var(--nm-accent);
+  --chart-2: #8B5CF6;
+  --chart-3: #EC4899;
+  --chart-4: #14B8A6;
+  --chart-5: #F59E0B;
+  --chart-grid: var(--nm-shadow-dark);
+}
+
+/* ========================================
+   DARK MODE - Neumorphism
+   ======================================== */
+[data-style="neumorphism"][data-theme="dark"] {
+  /* Base color - dark version */
+  --nm-base: #2D3748;
+  --nm-base-dark: #252D3A;
+  --nm-base-darker: #1E242F;
+
+  /* Shadow colors - adjusted for dark */
+  --nm-shadow-dark: #1A202C;
+  --nm-shadow-light: #404D64;
+
+  /* Background colors */
+  --background: var(--nm-base);
+  --background-secondary: var(--nm-base-dark);
+  --background-tertiary: var(--nm-base-darker);
+
+  /* Text colors */
+  --text-primary: #F7FAFC;
+  --text-secondary: #E2E8F0;
+  --text-tertiary: #A0AEC0;
+
+  /* Accent - slightly lighter in dark mode */
+  --nm-accent-light: #A5B4FC;
+
+  /* Sidebar */
+  --sidebar-background: var(--nm-base);
+
+  /* Charts */
+  --chart-grid: var(--nm-shadow-light);
+}
+
+/* ========================================
+   COMPONENT STYLES - Neumorphism
+   ======================================== */
+
+/* Cards - soft extruded look */
+[data-style="neumorphism"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+[data-style="neumorphism"] .card:hover {
+  box-shadow:
+    10px 10px 20px var(--nm-shadow-dark),
+    -10px -10px 20px var(--nm-shadow-light);
+}
+
+/* Pressed/inset card style */
+[data-style="neumorphism"] .card-inset {
+  background: var(--card-background);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow-inset);
+}
+
+/* Stats cards */
+[data-style="neumorphism"] .stats-card {
+  background: var(--card-background);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+[data-style="neumorphism"] .stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    12px 12px 24px var(--nm-shadow-dark),
+    -12px -12px 24px var(--nm-shadow-light);
+}
+
+[data-style="neumorphism"] .stats-card .value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nm-accent);
+}
+
+[data-style="neumorphism"] .stats-card .label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Icon containers - circular neumorphic */
+[data-style="neumorphism"] .icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--nm-base);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-style="neumorphism"] .icon-container-inset {
+  box-shadow: var(--card-shadow-inset);
+}
+
+/* Buttons - tactile feel */
+[data-style="neumorphism"] .btn-primary {
+  background: var(--nm-accent);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: var(--btn-shadow);
+  transition: all 0.2s ease;
+}
+
+[data-style="neumorphism"] .btn-primary:hover {
+  background: var(--nm-accent-light);
+  box-shadow:
+    8px 8px 16px var(--nm-shadow-dark),
+    -8px -8px 16px var(--nm-shadow-light);
+}
+
+[data-style="neumorphism"] .btn-primary:active {
+  box-shadow: var(--btn-shadow-pressed);
+}
+
+[data-style="neumorphism"] .btn-secondary {
+  background: var(--nm-base);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: var(--btn-shadow);
+  transition: all 0.2s ease;
+}
+
+[data-style="neumorphism"] .btn-secondary:hover {
+  color: var(--nm-accent);
+}
+
+[data-style="neumorphism"] .btn-secondary:active {
+  box-shadow: var(--btn-shadow-pressed);
+}
+
+/* Toggle switches - neumorphic */
+[data-style="neumorphism"] .toggle {
+  width: 56px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--nm-base);
+  box-shadow: var(--card-shadow-inset);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-style="neumorphism"] .toggle-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--nm-base);
+  box-shadow: var(--btn-shadow);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+[data-style="neumorphism"] .toggle-active .toggle-knob {
+  transform: translateX(28px);
+  background: var(--nm-accent);
+}
+
+/* Badge styles - soft */
+[data-style="neumorphism"] .badge {
+  background: var(--nm-base);
+  color: var(--nm-accent);
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow:
+    3px 3px 6px var(--nm-shadow-dark),
+    -3px -3px 6px var(--nm-shadow-light);
+}
+
+[data-style="neumorphism"] .badge-success {
+  color: var(--success);
+}
+
+[data-style="neumorphism"] .badge-error {
+  color: var(--error);
+}
+
+/* Table styling */
+[data-style="neumorphism"] .table-container {
+  background: var(--nm-base);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+[data-style="neumorphism"] .table-header {
+  background: var(--nm-base-dark);
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-style="neumorphism"] .table-row {
+  border-bottom: 1px solid var(--nm-base-dark);
+  transition: background 0.2s ease;
+}
+
+[data-style="neumorphism"] .table-row:hover {
+  background: var(--nm-base-dark);
+}
+
+/* Sidebar styling */
+[data-style="neumorphism"] .sidebar {
+  background: var(--sidebar-background);
+  box-shadow: 4px 0 12px var(--nm-shadow-dark);
+}
+
+[data-style="neumorphism"] .sidebar-item {
+  border-radius: 12px;
+  margin: 4px 8px;
+  transition: all 0.2s ease;
+}
+
+[data-style="neumorphism"] .sidebar-item:hover {
+  background: var(--nm-base-dark);
+  box-shadow:
+    inset 2px 2px 4px var(--nm-shadow-dark),
+    inset -2px -2px 4px var(--nm-shadow-light);
+}
+
+[data-style="neumorphism"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  box-shadow: var(--btn-shadow);
+}
+
+/* Input fields - inset style */
+[data-style="neumorphism"] .input {
+  background: var(--nm-base);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow-inset);
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+[data-style="neumorphism"] .input:focus {
+  outline: none;
+  box-shadow:
+    inset 6px 6px 12px var(--nm-shadow-dark),
+    inset -6px -6px 12px var(--nm-shadow-light);
+}
+
+[data-style="neumorphism"] .input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Progress bars - neumorphic */
+[data-style="neumorphism"] .progress-container {
+  height: 8px;
+  background: var(--nm-base);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow-inset);
+  overflow: hidden;
+}
+
+[data-style="neumorphism"] .progress-bar {
+  height: 100%;
+  background: var(--nm-accent);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Scrollbar styling */
+[data-style="neumorphism"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-style="neumorphism"] ::-webkit-scrollbar-track {
+  background: var(--nm-base);
+  border-radius: 5px;
+  box-shadow: var(--card-shadow-inset);
+}
+
+[data-style="neumorphism"] ::-webkit-scrollbar-thumb {
+  background: var(--nm-base);
+  border-radius: 5px;
+  box-shadow: var(--btn-shadow);
+}
+
+/* Focus states - subtle glow */
+[data-style="neumorphism"] *:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--nm-accent),
+    var(--card-shadow);
+}
+
+/* Dividers - soft inset line */
+[data-style="neumorphism"] .divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--nm-shadow-dark),
+    var(--nm-shadow-light)
+  );
+  border-radius: 1px;
+}
