@@ -102,6 +102,12 @@ const CHART_COLORS: Record<string, { revenue: string; expenses: string; profit: 
     profit: '#4a6cb8',
     grid: 'rgba(30, 45, 109, 0.1)',
   },
+  'minimal-bauhaus': {
+    revenue: '#1E3A8A',
+    expenses: '#DC2626',
+    profit: '#FBBF24',
+    grid: 'rgba(0, 0, 0, 0.08)',
+  },
 };
 
 /**

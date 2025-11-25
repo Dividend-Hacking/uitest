@@ -43,6 +43,7 @@ const CHART_COLORS: Record<string, string[]> = {
   illustrative: ['#E07A5F', '#81B29A', '#F2CC8F', '#3D405B', '#6B7FD7'],
   monochromatic: ['#1a1a1a', '#4d4d4d', '#808080', '#B3B3B3', '#E0E0E0'],
   'monochromatic-blue': ['#1a2d6d', '#2e4a8f', '#4a6cb8', '#a8b5e8', '#c7d2fe'],
+  'minimal-bauhaus': ['#1E3A8A', '#DC2626', '#FBBF24', '#000000', '#6B7280'],
 };
 
 /**
