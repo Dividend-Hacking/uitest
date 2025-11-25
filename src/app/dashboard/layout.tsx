@@ -14,7 +14,6 @@ import { ThemeProvider } from '@/contexts/ThemeContext';
 import { StyleProvider } from '@/contexts/StyleContext';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
-import { MobileStylePicker } from '@/components/layout/MobileStylePicker';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -44,9 +43,6 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </main>
           </div>
         </div>
-
-        {/* Mobile Style Picker - bottom sheet for mobile navigation */}
-        <MobileStylePicker />
       </StyleProvider>
     </ThemeProvider>
   );

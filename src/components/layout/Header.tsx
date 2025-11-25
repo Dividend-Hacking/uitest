@@ -18,6 +18,7 @@ import {
   Cog6ToothIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
+import { MobileSidebar } from './MobileSidebar';
 
 /**
  * Header displays the current style name and provides theme controls.
@@ -29,8 +30,11 @@ export function Header() {
 
   return (
     <header className="h-16 px-4 md:px-6 flex items-center justify-between border-b border-[var(--border-color)] bg-[var(--card-background)]">
-      {/* Left Section - Current Style Info */}
-      <div className="flex items-center gap-4">
+      {/* Left Section - Hamburger menu (mobile) + Current Style Info */}
+      <div className="flex items-center gap-3">
+        {/* Mobile Sidebar - hamburger button and slide-out drawer */}
+        <MobileSidebar />
+
         <div>
           <h2 className="text-base md:text-lg font-semibold text-[var(--text-primary)]">
             {currentStyle.name} Dashboard
