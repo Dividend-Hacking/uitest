@@ -11,18 +11,18 @@
    ======================================== */
 [data-style="monochromatic-blue"] {
   /* Navy blue palette - darkest to lightest */
-  --blue-darkest: #0d1a26;
-  --blue-darker: #152535;
+  --blue-darkest: #0a1628;
+  --blue-darker: #122244;
   --blue-dark: #1e3a5f;
-  --blue-medium: #3d5a80;
-  --blue-light: #6b8cae;
-  --blue-lighter: #a8c0d8;
-  --blue-lightest: #d1dce8;
+  --blue-medium: #2e5090;
+  --blue-light: #4a7cc9;
+  --blue-lighter: #7aa8e8;
+  --blue-lightest: #bdd4f9;
 
-  /* Background colors - light blue-grays */
-  --background: #f0f4f8;
-  --background-secondary: #e1e8f0;
-  --background-tertiary: #d1dce8;
+  /* Background colors - distinctly blue */
+  --background: #e8f0fe;
+  --background-secondary: #d4e4fc;
+  --background-tertiary: #bdd4f9;
 
   /* Text colors - navy shades */
   --text-primary: #1e3a5f;
@@ -30,9 +30,9 @@
   --text-tertiary: #6b8cae;
 
   /* Card styling - clean with blue-tinted shadows */
-  --card-background: #FFFFFF;
-  --card-border: 1px solid #c5d5e8;
-  --card-shadow: 0 2px 4px rgba(30, 58, 95, 0.08);
+  --card-background: #f5f9ff;
+  --card-border: 1px solid #a3c4f3;
+  --card-shadow: 0 2px 4px rgba(30, 58, 95, 0.12);
   --card-radius: 8px;
 
   /* Interactive states */
@@ -40,8 +40,8 @@
   --active-overlay: rgba(30, 58, 95, 0.12);
 
   /* Border colors */
-  --border-color: #c5d5e8;
-  --border-color-strong: #a8c0d8;
+  --border-color: #a3c4f3;
+  --border-color-strong: #7aa8e8;
 
   /* Status colors - all blue shades */
   --success: #3d5a80;
@@ -54,19 +54,19 @@
   --info-bg: rgba(74, 111, 165, 0.10);
 
   /* Sidebar */
-  --sidebar-background: #e1e8f0;
-  --sidebar-item-hover: rgba(30, 58, 95, 0.06);
-  --sidebar-item-active: rgba(30, 58, 95, 0.15);
+  --sidebar-background: #d4e4fc;
+  --sidebar-item-hover: rgba(30, 80, 144, 0.10);
+  --sidebar-item-active: rgba(30, 80, 144, 0.20);
   --sidebar-text: var(--text-secondary);
   --sidebar-text-active: var(--blue-dark);
 
   /* Charts - 5 distinct blue values */
   --chart-1: #1e3a5f;
-  --chart-2: #3d5a80;
-  --chart-3: #6b8cae;
-  --chart-4: #a8c0d8;
-  --chart-5: #d1dce8;
-  --chart-grid: #e1e8f0;
+  --chart-2: #2e5090;
+  --chart-3: #4a7cc9;
+  --chart-4: #7aa8e8;
+  --chart-5: #bdd4f9;
+  --chart-grid: #d4e4fc;
 
   /* Typography */
   --font-weight-normal: 400;
@@ -78,51 +78,51 @@
    DARK MODE - Monochromatic Blue
    ======================================== */
 [data-style="monochromatic-blue"][data-theme="dark"] {
-  /* Background colors - deep navy */
-  --background: #0d1a26;
-  --background-secondary: #152535;
-  --background-tertiary: #1e3245;
+  /* Background colors - rich deep navy */
+  --background: #0a1628;
+  --background-secondary: #122244;
+  --background-tertiary: #1a3355;
 
   /* Text colors - light blues */
-  --text-primary: #e1e8f0;
-  --text-secondary: #a8c0d8;
-  --text-tertiary: #7ba3d4;
+  --text-primary: #e8f0fe;
+  --text-secondary: #a3c4f3;
+  --text-tertiary: #7aa8e8;
 
   /* Card styling */
-  --card-background: #152535;
-  --card-border: 1px solid #2a4560;
-  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --card-background: #142244;
+  --card-border: 1px solid #2a4a78;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 
   /* Border colors */
-  --border-color: #2a4560;
-  --border-color-strong: #3d5a80;
+  --border-color: #2a4a78;
+  --border-color-strong: #3d6090;
 
   /* Interactive states */
   --hover-overlay: rgba(168, 192, 216, 0.06);
   --active-overlay: rgba(168, 192, 216, 0.12);
 
   /* Status colors - lighter blues for dark mode */
-  --success: #a8c0d8;
-  --success-bg: rgba(168, 192, 216, 0.15);
-  --warning: #7ba3d4;
-  --warning-bg: rgba(123, 163, 212, 0.15);
-  --error: #d1dce8;
-  --error-bg: rgba(209, 220, 232, 0.15);
-  --info: #a8c0d8;
-  --info-bg: rgba(168, 192, 216, 0.15);
+  --success: #a3c4f3;
+  --success-bg: rgba(163, 196, 243, 0.18);
+  --warning: #7aa8e8;
+  --warning-bg: rgba(122, 168, 232, 0.18);
+  --error: #bdd4f9;
+  --error-bg: rgba(189, 212, 249, 0.18);
+  --info: #a3c4f3;
+  --info-bg: rgba(163, 196, 243, 0.18);
 
   /* Sidebar */
-  --sidebar-background: #152535;
-  --sidebar-item-active: rgba(168, 192, 216, 0.15);
-  --sidebar-text-active: #e1e8f0;
+  --sidebar-background: #122244;
+  --sidebar-item-active: rgba(122, 168, 232, 0.20);
+  --sidebar-text-active: #e8f0fe;
 
   /* Charts - inverted for dark mode */
-  --chart-1: #e1e8f0;
-  --chart-2: #a8c0d8;
-  --chart-3: #7ba3d4;
-  --chart-4: #4a6fa5;
-  --chart-5: #3d5a80;
-  --chart-grid: #2a4560;
+  --chart-1: #e8f0fe;
+  --chart-2: #a3c4f3;
+  --chart-3: #7aa8e8;
+  --chart-4: #4a7cc9;
+  --chart-5: #2e5090;
+  --chart-grid: #2a4a78;
 }
 
 /* ========================================
