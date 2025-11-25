@@ -11,17 +11,17 @@
    ======================================== */
 [data-style="neumorphism"] {
   /* Base color - everything derives from this */
-  --nm-base: #E0E5EC;
+  --nm-base: #E4EBF5;
   --nm-base-dark: #D1D9E6;
-  --nm-base-darker: #C2CBDA;
+  --nm-base-darker: #C8D0DE;
 
-  /* Shadow colors */
-  --nm-shadow-dark: #A3B1C6;
-  --nm-shadow-light: #FFFFFF;
+  /* Shadow colors - using rgba for soft, diffuse shadows */
+  --nm-shadow-dark: rgba(163, 177, 198, 0.5);
+  --nm-shadow-light: rgba(255, 255, 255, 0.7);
 
-  /* Accent color - used sparingly */
-  --nm-accent: #6366F1;
-  --nm-accent-light: #818CF8;
+  /* Accent color - blue similar to reference */
+  --nm-accent: #5B86E5;
+  --nm-accent-light: #7BA3F0;
 
   /* Background colors */
   --background: var(--nm-base);
@@ -33,24 +33,24 @@
   --text-secondary: #4A5568;
   --text-tertiary: #718096;
 
-  /* Card styling - soft extrusion */
+  /* Card styling - soft, pillow-like extrusion */
   --card-background: var(--nm-base);
   --card-border: none;
   --card-shadow:
-    8px 8px 16px var(--nm-shadow-dark),
-    -8px -8px 16px var(--nm-shadow-light);
+    6px 6px 18px var(--nm-shadow-dark),
+    -6px -6px 18px var(--nm-shadow-light);
   --card-shadow-inset:
-    inset 4px 4px 8px var(--nm-shadow-dark),
-    inset -4px -4px 8px var(--nm-shadow-light);
+    inset 3px 3px 8px var(--nm-shadow-dark),
+    inset -3px -3px 8px var(--nm-shadow-light);
   --card-radius: 20px;
 
-  /* Button shadows */
+  /* Button shadows - gentle extrusion */
   --btn-shadow:
-    6px 6px 12px var(--nm-shadow-dark),
-    -6px -6px 12px var(--nm-shadow-light);
+    4px 4px 12px var(--nm-shadow-dark),
+    -4px -4px 12px var(--nm-shadow-light);
   --btn-shadow-pressed:
-    inset 4px 4px 8px var(--nm-shadow-dark),
-    inset -4px -4px 8px var(--nm-shadow-light);
+    inset 3px 3px 6px var(--nm-shadow-dark),
+    inset -3px -3px 6px var(--nm-shadow-light);
 
   /* Border colors */
   --border-color: transparent;
@@ -91,9 +91,9 @@
   --nm-base-dark: #252D3A;
   --nm-base-darker: #1E242F;
 
-  /* Shadow colors - adjusted for dark */
-  --nm-shadow-dark: #1A202C;
-  --nm-shadow-light: #404D64;
+  /* Shadow colors - soft rgba shadows for dark mode */
+  --nm-shadow-dark: rgba(20, 25, 35, 0.5);
+  --nm-shadow-light: rgba(55, 70, 90, 0.4);
 
   /* Background colors */
   --background: var(--nm-base);
@@ -130,8 +130,8 @@
 
 [data-style="neumorphism"] .card:hover {
   box-shadow:
-    10px 10px 20px var(--nm-shadow-dark),
-    -10px -10px 20px var(--nm-shadow-light);
+    7px 7px 20px var(--nm-shadow-dark),
+    -7px -7px 20px var(--nm-shadow-light);
 }
 
 /* Pressed/inset card style */
@@ -152,8 +152,8 @@
 [data-style="neumorphism"] .stats-card:hover {
   transform: translateY(-2px);
   box-shadow:
-    12px 12px 24px var(--nm-shadow-dark),
-    -12px -12px 24px var(--nm-shadow-light);
+    8px 8px 22px var(--nm-shadow-dark),
+    -8px -8px 22px var(--nm-shadow-light);
 }
 
 [data-style="neumorphism"] .stats-card .value {
@@ -199,8 +199,8 @@
 [data-style="neumorphism"] .btn-primary:hover {
   background: var(--nm-accent-light);
   box-shadow:
-    8px 8px 16px var(--nm-shadow-dark),
-    -8px -8px 16px var(--nm-shadow-light);
+    5px 5px 14px var(--nm-shadow-dark),
+    -5px -5px 14px var(--nm-shadow-light);
 }
 
 [data-style="neumorphism"] .btn-primary:active {
@@ -263,8 +263,8 @@
   font-size: 11px;
   font-weight: 600;
   box-shadow:
-    3px 3px 6px var(--nm-shadow-dark),
-    -3px -3px 6px var(--nm-shadow-light);
+    2px 2px 5px var(--nm-shadow-dark),
+    -2px -2px 5px var(--nm-shadow-light);
 }
 
 [data-style="neumorphism"] .badge-success {
@@ -303,7 +303,7 @@
 /* Sidebar styling */
 [data-style="neumorphism"] .sidebar {
   background: var(--sidebar-background);
-  box-shadow: 4px 0 12px var(--nm-shadow-dark);
+  box-shadow: 3px 0 10px var(--nm-shadow-dark);
 }
 
 [data-style="neumorphism"] .sidebar-item {
@@ -315,8 +315,8 @@
 [data-style="neumorphism"] .sidebar-item:hover {
   background: var(--nm-base-dark);
   box-shadow:
-    inset 2px 2px 4px var(--nm-shadow-dark),
-    inset -2px -2px 4px var(--nm-shadow-light);
+    inset 2px 2px 5px var(--nm-shadow-dark),
+    inset -2px -2px 5px var(--nm-shadow-light);
 }
 
 [data-style="neumorphism"] .sidebar-item-active {
@@ -339,8 +339,8 @@
 [data-style="neumorphism"] .input:focus {
   outline: none;
   box-shadow:
-    inset 6px 6px 12px var(--nm-shadow-dark),
-    inset -6px -6px 12px var(--nm-shadow-light);
+    inset 4px 4px 10px var(--nm-shadow-dark),
+    inset -4px -4px 10px var(--nm-shadow-light);
 }
 
 [data-style="neumorphism"] .input::placeholder {
@@ -385,7 +385,7 @@
 [data-style="neumorphism"] *:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 3px var(--nm-accent),
+    0 0 0 2px var(--nm-accent),
     var(--card-shadow);
 }
 
