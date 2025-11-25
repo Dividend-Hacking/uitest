@@ -10,23 +10,23 @@
    LIGHT MODE - Neumorphism
    ======================================== */
 [data-style="neumorphism"] {
-  /* Base color - everything derives from this */
+  /* Base color - ONE color for everything (true neumorphism) */
   --nm-base: #E4EBF5;
-  --nm-base-dark: #D1D9E6;
-  --nm-base-darker: #C8D0DE;
+  --nm-base-dark: #E4EBF5;
+  --nm-base-darker: #E4EBF5;
 
   /* Shadow colors - using rgba for soft, diffuse shadows */
   --nm-shadow-dark: rgba(163, 177, 198, 0.5);
   --nm-shadow-light: rgba(255, 255, 255, 0.7);
 
-  /* Accent color - blue similar to reference */
+  /* Accent color - blue, used sparingly */
   --nm-accent: #5B86E5;
   --nm-accent-light: #7BA3F0;
 
-  /* Background colors */
+  /* Background colors - all unified */
   --background: var(--nm-base);
-  --background-secondary: var(--nm-base-dark);
-  --background-tertiary: var(--nm-base-darker);
+  --background-secondary: var(--nm-base);
+  --background-tertiary: var(--nm-base);
 
   /* Text colors */
   --text-primary: #2D3748;
@@ -86,19 +86,19 @@
    DARK MODE - Neumorphism
    ======================================== */
 [data-style="neumorphism"][data-theme="dark"] {
-  /* Base color - dark version */
+  /* Base color - ONE color for dark mode */
   --nm-base: #2D3748;
-  --nm-base-dark: #252D3A;
-  --nm-base-darker: #1E242F;
+  --nm-base-dark: #2D3748;
+  --nm-base-darker: #2D3748;
 
   /* Shadow colors - soft rgba shadows for dark mode */
   --nm-shadow-dark: rgba(20, 25, 35, 0.5);
   --nm-shadow-light: rgba(55, 70, 90, 0.4);
 
-  /* Background colors */
+  /* Background colors - all unified */
   --background: var(--nm-base);
-  --background-secondary: var(--nm-base-dark);
-  --background-tertiary: var(--nm-base-darker);
+  --background-secondary: var(--nm-base);
+  --background-tertiary: var(--nm-base);
 
   /* Text colors */
   --text-primary: #F7FAFC;
@@ -159,7 +159,7 @@
 [data-style="neumorphism"] .stats-card .value {
   font-size: 32px;
   font-weight: 700;
-  color: var(--nm-accent);
+  color: var(--text-primary);
 }
 
 [data-style="neumorphism"] .stats-card .label {
@@ -257,7 +257,7 @@
 /* Badge styles - soft */
 [data-style="neumorphism"] .badge {
   background: var(--nm-base);
-  color: var(--nm-accent);
+  color: var(--text-secondary);
   border: none;
   border-radius: 20px;
   font-size: 11px;
@@ -284,7 +284,7 @@
 }
 
 [data-style="neumorphism"] .table-header {
-  background: var(--nm-base-dark);
+  background: var(--nm-base);
   color: var(--text-secondary);
   font-size: 12px;
   text-transform: uppercase;
@@ -292,12 +292,12 @@
 }
 
 [data-style="neumorphism"] .table-row {
-  border-bottom: 1px solid var(--nm-base-dark);
-  transition: background 0.2s ease;
+  border-bottom: 1px solid rgba(163, 177, 198, 0.2);
+  transition: box-shadow 0.2s ease;
 }
 
 [data-style="neumorphism"] .table-row:hover {
-  background: var(--nm-base-dark);
+  box-shadow: inset 2px 2px 5px var(--nm-shadow-dark), inset -2px -2px 5px var(--nm-shadow-light);
 }
 
 /* Sidebar styling */
@@ -313,7 +313,6 @@
 }
 
 [data-style="neumorphism"] .sidebar-item:hover {
-  background: var(--nm-base-dark);
   box-shadow:
     inset 2px 2px 5px var(--nm-shadow-dark),
     inset -2px -2px 5px var(--nm-shadow-light);
