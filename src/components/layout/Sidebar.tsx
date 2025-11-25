@@ -24,6 +24,7 @@ import {
   WindowIcon,
   PaintBrushIcon,
   HomeIcon,
+  StopIcon,
 } from '@heroicons/react/24/outline';
 
 /**
@@ -40,10 +41,11 @@ const STYLE_ICONS: Record<string, React.ComponentType<{ className?: string }>> =
   neumorphism: SunIcon,
   glassmorphism: WindowIcon,
   illustrative: PaintBrushIcon,
+  monochromatic: StopIcon,
 };
 
 /**
- * Sidebar provides navigation between all 9 dashboard styles.
+ * Sidebar provides navigation between all 10 dashboard styles.
  * Displays style names with icons and highlights the active style.
  */
 export function Sidebar() {
@@ -142,7 +144,7 @@ export function Sidebar() {
       {/* Footer Section */}
       <div className="px-4 py-4 border-t border-[var(--border-color)]">
         <div className="text-xs text-[var(--text-tertiary)]">
-          <p className="mb-1">9 unique styles</p>
+          <p className="mb-1">10 unique styles</p>
           <p>Light & Dark modes</p>
         </div>
       </div>

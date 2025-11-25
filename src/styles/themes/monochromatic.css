@@ -1,0 +1,315 @@
+/**
+ * Monochromatic Theme
+ *
+ * A pure grayscale theme with no color accents whatsoever.
+ * Characterized by elegant contrast, timeless aesthetics, and focused design.
+ * This theme removes all color distractions to let content and typography shine.
+ */
+
+/* ========================================
+   LIGHT MODE - Monochromatic
+   ======================================== */
+[data-style="monochromatic"] {
+  /* Primary grayscale palette - no colors at all */
+  --mono-black: #1a1a1a;
+  --mono-dark: #333333;
+  --mono-medium: #666666;
+  --mono-light: #999999;
+  --mono-lighter: #CCCCCC;
+  --mono-lightest: #E5E5E5;
+
+  /* Background colors */
+  --background: #FFFFFF;
+  --background-secondary: #F8F8F8;
+  --background-tertiary: #F0F0F0;
+
+  /* Text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4d4d4d;
+  --text-tertiary: #808080;
+
+  /* Card styling - clean with subtle shadows */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #E5E5E5;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --card-radius: 8px;
+
+  /* Interactive states */
+  --hover-overlay: rgba(0, 0, 0, 0.04);
+  --active-overlay: rgba(0, 0, 0, 0.08);
+
+  /* Border colors */
+  --border-color: #E5E5E5;
+  --border-color-strong: #CCCCCC;
+
+  /* Status colors - all grayscale */
+  --success: #333333;
+  --success-bg: rgba(51, 51, 51, 0.08);
+  --warning: #666666;
+  --warning-bg: rgba(102, 102, 102, 0.08);
+  --error: #1a1a1a;
+  --error-bg: rgba(26, 26, 26, 0.08);
+  --info: #4d4d4d;
+  --info-bg: rgba(77, 77, 77, 0.08);
+
+  /* Sidebar */
+  --sidebar-background: #F8F8F8;
+  --sidebar-item-hover: rgba(0, 0, 0, 0.04);
+  --sidebar-item-active: rgba(0, 0, 0, 0.10);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--mono-black);
+
+  /* Charts - 5 distinct grayscale values */
+  --chart-1: #1a1a1a;
+  --chart-2: #4d4d4d;
+  --chart-3: #808080;
+  --chart-4: #B3B3B3;
+  --chart-5: #E0E0E0;
+  --chart-grid: #F0F0F0;
+
+  /* Typography */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --letter-spacing: 0.01em;
+}
+
+/* ========================================
+   DARK MODE - Monochromatic
+   ======================================== */
+[data-style="monochromatic"][data-theme="dark"] {
+  /* Background colors */
+  --background: #0a0a0a;
+  --background-secondary: #141414;
+  --background-tertiary: #1f1f1f;
+
+  /* Text colors */
+  --text-primary: #F5F5F5;
+  --text-secondary: #B3B3B3;
+  --text-tertiary: #808080;
+
+  /* Card styling */
+  --card-background: #141414;
+  --card-border: 1px solid #2a2a2a;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Border colors */
+  --border-color: #2a2a2a;
+  --border-color-strong: #3d3d3d;
+
+  /* Interactive states */
+  --hover-overlay: rgba(255, 255, 255, 0.04);
+  --active-overlay: rgba(255, 255, 255, 0.08);
+
+  /* Status colors - lighter grays for dark mode */
+  --success: #B3B3B3;
+  --success-bg: rgba(179, 179, 179, 0.12);
+  --warning: #999999;
+  --warning-bg: rgba(153, 153, 153, 0.12);
+  --error: #E0E0E0;
+  --error-bg: rgba(224, 224, 224, 0.12);
+  --info: #CCCCCC;
+  --info-bg: rgba(204, 204, 204, 0.12);
+
+  /* Sidebar */
+  --sidebar-background: #141414;
+  --sidebar-item-active: rgba(255, 255, 255, 0.10);
+  --sidebar-text-active: #FFFFFF;
+
+  /* Charts - inverted for dark mode */
+  --chart-1: #F5F5F5;
+  --chart-2: #CCCCCC;
+  --chart-3: #999999;
+  --chart-4: #666666;
+  --chart-5: #4d4d4d;
+  --chart-grid: #2a2a2a;
+}
+
+/* ========================================
+   COMPONENT STYLES - Monochromatic
+   ======================================== */
+
+/* Cards - clean and elegant */
+[data-style="monochromatic"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+[data-style="monochromatic"] .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-style="monochromatic"][data-theme="dark"] .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Stats cards */
+[data-style="monochromatic"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+[data-style="monochromatic"] .stats-card .value {
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+[data-style="monochromatic"] .stats-card .label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Buttons - grayscale only */
+[data-style="monochromatic"] .btn-primary {
+  background: var(--mono-black);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: opacity 0.2s ease;
+}
+
+[data-style="monochromatic"][data-theme="dark"] .btn-primary {
+  background: #FFFFFF;
+  color: #0a0a0a;
+}
+
+[data-style="monochromatic"] .btn-primary:hover {
+  opacity: 0.85;
+}
+
+[data-style="monochromatic"] .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-strong);
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  transition: background 0.2s ease;
+}
+
+[data-style="monochromatic"] .btn-secondary:hover {
+  background: var(--hover-overlay);
+}
+
+/* Badge styles */
+[data-style="monochromatic"] .badge {
+  background: var(--background-tertiary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+/* Table styling */
+[data-style="monochromatic"] .table-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color-strong);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+[data-style="monochromatic"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-style="monochromatic"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="monochromatic"] .table-row:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar item styles */
+[data-style="monochromatic"] .sidebar-item {
+  border-radius: 6px;
+  font-weight: var(--font-weight-normal);
+  transition: background 0.15s ease;
+}
+
+[data-style="monochromatic"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+}
+
+[data-style="monochromatic"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Input fields */
+[data-style="monochromatic"] .input {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+[data-style="monochromatic"] .input:focus {
+  border-color: var(--mono-dark);
+  outline: none;
+}
+
+[data-style="monochromatic"][data-theme="dark"] .input:focus {
+  border-color: var(--mono-lighter);
+}
+
+/* Dividers */
+[data-style="monochromatic"] .divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Links - grayscale with underline */
+[data-style="monochromatic"] .link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s ease;
+}
+
+[data-style="monochromatic"] .link:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar styling */
+[data-style="monochromatic"] ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+[data-style="monochromatic"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-style="monochromatic"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color-strong);
+  border-radius: 3px;
+}
+
+[data-style="monochromatic"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--mono-medium);
+}
+
+/* Focus states - grayscale ring */
+[data-style="monochromatic"] *:focus-visible {
+  outline: 2px solid var(--mono-dark);
+  outline-offset: 2px;
+}
+
+[data-style="monochromatic"][data-theme="dark"] *:focus-visible {
+  outline: 2px solid var(--mono-lighter);
+}

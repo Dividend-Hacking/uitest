@@ -142,6 +142,18 @@ export const STYLES: StyleDefinition[] = [
       background: '#F5F0E6',
     },
   },
+  {
+    slug: 'monochromatic',
+    name: 'Monochromatic',
+    description: 'Pure grayscale palette, elegant contrast, no color distractions',
+    characteristics: ['grayscale', 'high-contrast', 'timeless', 'focused'],
+    colors: {
+      primary: '#1a1a1a',
+      secondary: '#808080',
+      accent: '#4d4d4d',
+      background: '#FFFFFF',
+    },
+  },
 ];
 
 /**
