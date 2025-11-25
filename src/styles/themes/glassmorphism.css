@@ -18,8 +18,9 @@
   --glass-blur: 20px;
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
-  /* Background - dark to make orbs pop */
-  --background: #1e1b4b;
+  /* Background - TRANSPARENT so Tailwind bg-[var(--background)] doesn't interfere */
+  /* The actual dark background is set on main element directly */
+  --background: transparent;
   --background-secondary: rgba(255, 255, 255, 0.05);
   --background-tertiary: rgba(255, 255, 255, 0.03);
 
@@ -78,7 +79,8 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
-  --background: #0f0a1f;
+  /* Keep transparent - actual background on main element */
+  --background: transparent;
   --background-secondary: rgba(255, 255, 255, 0.03);
   --background-tertiary: rgba(255, 255, 255, 0.02);
 
