@@ -356,15 +356,15 @@
    Fix invisible text/icons on colored backgrounds
    ======================================== */
 
-/* Status badges in tables - black pill with white text */
-[data-style="brutalism"] .rounded-full[class*="bg-"] {
+/* Status badges in tables - black pill with white text (span only, not toggles) */
+[data-style="brutalism"] span.rounded-full[class*="bg-"] {
   background: var(--brutalism-black) !important;
   color: var(--brutalism-white) !important;
   border: 2px solid var(--brutalism-black);
   border-radius: 0 !important;
 }
 
-[data-style="brutalism"][data-theme="dark"] .rounded-full[class*="bg-"] {
+[data-style="brutalism"][data-theme="dark"] span.rounded-full[class*="bg-"] {
   background: var(--brutalism-white) !important;
   color: var(--brutalism-black) !important;
   border-color: var(--brutalism-white);
