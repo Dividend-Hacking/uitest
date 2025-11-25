@@ -84,7 +84,19 @@
   --background-secondary: rgba(255, 255, 255, 0.03);
   --background-tertiary: rgba(255, 255, 255, 0.02);
 
+  /* Text colors - WHITE for dark mode */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-tertiary: rgba(255, 255, 255, 0.6);
+
+  /* Sidebar - WHITE text for dark mode */
+  --sidebar-text: rgba(255, 255, 255, 0.9);
+  --sidebar-text-active: #FFFFFF;
   --sidebar-background: rgba(0, 0, 0, 0.3);
+
+  /* Charts - WHITE for dark mode */
+  --chart-1: #FFFFFF;
+  --chart-2: rgba(255, 255, 255, 0.7);
   --chart-grid: rgba(255, 255, 255, 0.08);
 }
 
@@ -199,7 +211,7 @@
 [data-style="glassmorphism"] .stats-card .value {
   font-size: 32px;
   font-weight: 700;
-  color: #1e1b4b;
+  color: var(--text-primary);
 }
 
 [data-style="glassmorphism"] .stats-card .label {
@@ -273,7 +285,7 @@
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: #1e1b4b;
+  color: var(--text-primary);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   font-weight: 600;
@@ -291,7 +303,7 @@
 [data-style="glassmorphism"] .badge {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  color: #1e1b4b;
+  color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   font-size: 11px;
@@ -359,7 +371,7 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: #1e1b4b;
+  color: var(--text-primary);
   transition: all 0.2s ease;
 }
 
