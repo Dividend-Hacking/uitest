@@ -1,155 +1,231 @@
 /**
  * Glassmorphism Theme
  *
- * A modern, translucent theme featuring frosted glass effects and layered elements.
- * Characterized by blur effects, transparency, subtle borders, and vibrant backgrounds.
- * This theme creates a sophisticated, futuristic aesthetic with depth and dimension.
+ * A stunning frosted glass theme featuring heavy blur, transparency, and layered elements.
+ * Characterized by see-through panels, colorful backgrounds visible through glass,
+ * and subtle light reflections. Creates a sophisticated, modern aesthetic.
  */
 
 /* ========================================
    LIGHT MODE - Glassmorphism
    ======================================== */
 [data-style="glassmorphism"] {
-  /* Glass properties */
-  --glass-bg: rgba(255, 255, 255, 0.25);
-  --glass-bg-strong: rgba(255, 255, 255, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-blur: 16px;
-  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  /* Glass properties - very transparent */
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-bg-strong: rgba(255, 255, 255, 0.18);
+  --glass-bg-hover: rgba(255, 255, 255, 0.22);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-border-glow: rgba(255, 255, 255, 0.4);
+  --glass-blur: 24px;
+  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
 
-  /* Accent colors */
+  /* Accent colors - vibrant for background visibility */
   --glass-purple: #8B5CF6;
   --glass-pink: #EC4899;
   --glass-cyan: #06B6D4;
   --glass-blue: #3B82F6;
+  --glass-indigo: #6366F1;
 
-  /* Background - gradient mesh */
-  --background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  --background-secondary: rgba(255, 255, 255, 0.1);
-  --background-tertiary: rgba(255, 255, 255, 0.05);
+  /* Background - rich, colorful gradient that shows through glass */
+  --background: #667eea;
+  --background-secondary: rgba(255, 255, 255, 0.08);
+  --background-tertiary: rgba(255, 255, 255, 0.04);
 
-  /* Text colors */
-  --text-primary: #1E293B;
-  --text-secondary: #334155;
-  --text-tertiary: #64748B;
+  /* Text colors - light for contrast against colorful bg */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.9);
+  --text-tertiary: rgba(255, 255, 255, 0.7);
 
   /* Card styling - frosted glass */
   --card-background: var(--glass-bg);
   --card-border: 1px solid var(--glass-border);
   --card-shadow: var(--glass-shadow);
-  --card-radius: 16px;
-  --card-backdrop: blur(var(--glass-blur));
+  --card-radius: 20px;
+  --card-backdrop: blur(var(--glass-blur)) saturate(180%);
 
   /* Border colors */
   --border-color: var(--glass-border);
-  --border-color-strong: rgba(255, 255, 255, 0.5);
+  --border-color-strong: rgba(255, 255, 255, 0.35);
 
-  /* Status colors */
-  --success: #10B981;
-  --success-bg: rgba(16, 185, 129, 0.2);
-  --warning: #F59E0B;
-  --warning-bg: rgba(245, 158, 11, 0.2);
-  --error: #EF4444;
-  --error-bg: rgba(239, 68, 68, 0.2);
-  --info: #3B82F6;
-  --info-bg: rgba(59, 130, 246, 0.2);
+  /* Status colors - adjusted for glass bg */
+  --success: #34D399;
+  --success-bg: rgba(52, 211, 153, 0.25);
+  --warning: #FBBF24;
+  --warning-bg: rgba(251, 191, 36, 0.25);
+  --error: #F87171;
+  --error-bg: rgba(248, 113, 113, 0.25);
+  --info: #60A5FA;
+  --info-bg: rgba(96, 165, 250, 0.25);
 
   /* Sidebar */
-  --sidebar-background: var(--glass-bg-strong);
-  --sidebar-item-hover: rgba(255, 255, 255, 0.2);
-  --sidebar-item-active: var(--glass-purple);
-  --sidebar-text: var(--text-secondary);
+  --sidebar-background: var(--glass-bg);
+  --sidebar-item-hover: rgba(255, 255, 255, 0.15);
+  --sidebar-item-active: rgba(255, 255, 255, 0.25);
+  --sidebar-text: rgba(255, 255, 255, 0.9);
   --sidebar-text-active: #FFFFFF;
 
   /* Charts */
-  --chart-1: var(--glass-purple);
-  --chart-2: var(--glass-pink);
+  --chart-1: #FFFFFF;
+  --chart-2: rgba(255, 255, 255, 0.7);
   --chart-3: var(--glass-cyan);
-  --chart-4: var(--glass-blue);
-  --chart-5: #F59E0B;
-  --chart-grid: rgba(255, 255, 255, 0.2);
+  --chart-4: var(--glass-pink);
+  --chart-5: var(--glass-purple);
+  --chart-grid: rgba(255, 255, 255, 0.15);
+
+  /* Hover overlay */
+  --hover-overlay: rgba(255, 255, 255, 0.1);
 }
 
 /* ========================================
    DARK MODE - Glassmorphism
    ======================================== */
 [data-style="glassmorphism"][data-theme="dark"] {
-  /* Glass properties - adjusted for dark */
-  --glass-bg: rgba(17, 24, 39, 0.6);
-  --glass-bg-strong: rgba(17, 24, 39, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  /* Glass properties - darker but still transparent */
+  --glass-bg: rgba(0, 0, 0, 0.25);
+  --glass-bg-strong: rgba(0, 0, 0, 0.35);
+  --glass-bg-hover: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-glow: rgba(139, 92, 246, 0.4);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 
-  /* Background - darker gradient */
-  --background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  /* Background - darker but still colorful */
+  --background: #1a1a2e;
   --background-secondary: rgba(255, 255, 255, 0.05);
   --background-tertiary: rgba(255, 255, 255, 0.02);
 
   /* Text colors */
-  --text-primary: #F8FAFC;
-  --text-secondary: #E2E8F0;
-  --text-tertiary: #94A3B8;
-
-  /* Border colors */
-  --border-color: rgba(255, 255, 255, 0.1);
-  --border-color-strong: rgba(255, 255, 255, 0.2);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-tertiary: rgba(255, 255, 255, 0.6);
 
   /* Sidebar */
-  --sidebar-background: var(--glass-bg-strong);
-  --sidebar-text: var(--text-secondary);
+  --sidebar-background: var(--glass-bg);
+  --sidebar-text: rgba(255, 255, 255, 0.85);
 
   /* Charts */
   --chart-grid: rgba(255, 255, 255, 0.1);
 }
 
 /* ========================================
+   BACKGROUND - Colorful gradient mesh
+   ======================================== */
+
+/* Main container gets the colorful background */
+[data-style="glassmorphism"] main {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(6, 182, 212, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #667eea 0%, #764ba2 35%, #f093fb 70%, #667eea 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+[data-style="glassmorphism"][data-theme="dark"] main {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.25) 0%, transparent 50%),
+    linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  background-attachment: fixed;
+}
+
+/* Sidebar also gets background visibility */
+[data-style="glassmorphism"] .sidebar {
+  background: var(--sidebar-background);
+  backdrop-filter: var(--card-backdrop);
+  -webkit-backdrop-filter: var(--card-backdrop);
+  border-right: 1px solid var(--glass-border);
+  position: relative;
+}
+
+/* Add subtle shimmer/reflection to sidebar */
+[data-style="glassmorphism"] .sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ========================================
    COMPONENT STYLES - Glassmorphism
    ======================================== */
 
-/* Base glass effect */
-[data-style="glassmorphism"] .glass {
-  background: var(--card-background);
-  backdrop-filter: var(--card-backdrop);
-  -webkit-backdrop-filter: var(--card-backdrop);
-  border: var(--card-border);
-  border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
-}
-
-/* Cards - frosted glass panels */
+/* Cards - true frosted glass panels */
 [data-style="glassmorphism"] .card {
   background: var(--card-background);
   backdrop-filter: var(--card-backdrop);
   -webkit-backdrop-filter: var(--card-backdrop);
   border: var(--card-border);
   border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
+  box-shadow:
+    var(--card-shadow),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-[data-style="glassmorphism"] .card:hover {
-  background: var(--glass-bg-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);
+/* Glass shine/reflection effect */
+[data-style="glassmorphism"] .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, transparent 100%);
+  pointer-events: none;
+  border-radius: var(--card-radius) var(--card-radius) 0 0;
 }
 
-/* Stats cards with gradient accents */
+[data-style="glassmorphism"] .card:hover {
+  background: var(--glass-bg-hover);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 40px rgba(31, 38, 135, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-color: var(--glass-border-glow);
+}
+
+/* Stats cards */
 [data-style="glassmorphism"] .stats-card {
   background: var(--card-background);
   backdrop-filter: var(--card-backdrop);
   -webkit-backdrop-filter: var(--card-backdrop);
   border: var(--card-border);
   border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
+  box-shadow:
+    var(--card-shadow),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
 
-/* Gradient accent on top */
+/* Glass shine on stats cards */
 [data-style="glassmorphism"] .stats-card::before {
   content: '';
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Colored glow accent at bottom */
+[data-style="glassmorphism"] .stats-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 3px;
@@ -159,57 +235,61 @@
 [data-style="glassmorphism"] .stats-card .value {
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--glass-purple), var(--glass-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 [data-style="glassmorphism"] .stats-card .label {
   font-size: 13px;
   color: var(--text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
-/* Buttons - glass style */
+/* Buttons - glass style with glow */
 [data-style="glassmorphism"] .btn-primary {
   background: linear-gradient(135deg, var(--glass-purple), var(--glass-pink));
   color: #FFFFFF;
   border: none;
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  box-shadow:
+    0 4px 15px rgba(139, 92, 246, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 [data-style="glassmorphism"] .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+  box-shadow:
+    0 8px 25px rgba(139, 92, 246, 0.5),
+    0 0 20px rgba(139, 92, 246, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
 }
 
 [data-style="glassmorphism"] .btn-secondary {
   background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--text-primary);
-  border: var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 [data-style="glassmorphism"] .btn-secondary:hover {
-  background: var(--glass-bg-strong);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-glow);
 }
 
-/* Badge styles - translucent */
+/* Badge styles - translucent with glow */
 [data-style="glassmorphism"] .badge {
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: var(--glass-purple);
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
@@ -218,13 +298,21 @@
 [data-style="glassmorphism"] .badge-success {
   background: var(--success-bg);
   color: var(--success);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(52, 211, 153, 0.4);
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
 }
 
 [data-style="glassmorphism"] .badge-error {
   background: var(--error-bg);
   color: var(--error);
-  border-color: rgba(239, 68, 68, 0.3);
+  border-color: rgba(248, 113, 113, 0.4);
+  box-shadow: 0 0 10px rgba(248, 113, 113, 0.2);
+}
+
+[data-style="glassmorphism"] .badge-warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border-color: rgba(251, 191, 36, 0.4);
 }
 
 /* Table styling - glass container */
@@ -238,38 +326,28 @@
 }
 
 [data-style="glassmorphism"] .table-header {
-  background: rgba(255, 255, 255, 0.1);
-  border-bottom: var(--card-border);
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--glass-border);
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--text-tertiary);
 }
 
-[data-style="glassmorphism"][data-theme="dark"] .table-header {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 [data-style="glassmorphism"] .table-row {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background 0.2s ease;
 }
 
 [data-style="glassmorphism"] .table-row:hover {
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Sidebar styling - glass panel */
-[data-style="glassmorphism"] .sidebar {
-  background: var(--sidebar-background);
-  backdrop-filter: var(--card-backdrop);
-  -webkit-backdrop-filter: var(--card-backdrop);
-  border-right: var(--card-border);
-}
-
+/* Sidebar item styles */
 [data-style="glassmorphism"] .sidebar-item {
   border-radius: 12px;
   transition: all 0.2s ease;
+  color: var(--sidebar-text);
 }
 
 [data-style="glassmorphism"] .sidebar-item:hover {
@@ -279,61 +357,38 @@
 [data-style="glassmorphism"] .sidebar-item-active {
   background: var(--sidebar-item-active);
   color: var(--sidebar-text-active);
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
 }
 
 /* Input fields - glass style */
 [data-style="glassmorphism"] .input {
   background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: var(--text-primary);
+  color: #FFFFFF;
   transition: all 0.2s ease;
 }
 
 [data-style="glassmorphism"] .input:focus {
   outline: none;
-  border-color: var(--glass-purple);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  border-color: var(--glass-border-glow);
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.2),
+    0 0 20px rgba(139, 92, 246, 0.15);
 }
 
 [data-style="glassmorphism"] .input::placeholder {
   color: var(--text-tertiary);
 }
 
-/* Floating orbs for background decoration */
-[data-style="glassmorphism"] .orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-[data-style="glassmorphism"] .orb-purple {
-  background: var(--glass-purple);
-  width: 300px;
-  height: 300px;
-}
-
-[data-style="glassmorphism"] .orb-pink {
-  background: var(--glass-pink);
-  width: 250px;
-  height: 250px;
-}
-
-[data-style="glassmorphism"] .orb-cyan {
-  background: var(--glass-cyan);
-  width: 200px;
-  height: 200px;
-}
-
 /* Progress bars */
 [data-style="glassmorphism"] .progress-container {
   height: 8px;
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   overflow: hidden;
   backdrop-filter: blur(4px);
@@ -343,6 +398,14 @@
   height: 100%;
   background: linear-gradient(90deg, var(--glass-purple), var(--glass-pink));
   border-radius: 4px;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* Icon containers */
+[data-style="glassmorphism"] .icon-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Scrollbar styling */
@@ -352,18 +415,22 @@
 }
 
 [data-style="glassmorphism"] ::-webkit-scrollbar-track {
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
 }
 
 [data-style="glassmorphism"] ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--glass-purple), var(--glass-pink));
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
+}
+
+[data-style="glassmorphism"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Focus states */
 [data-style="glassmorphism"] *:focus-visible {
-  outline: 2px solid var(--glass-purple);
+  outline: 2px solid rgba(255, 255, 255, 0.5);
   outline-offset: 2px;
 }
 
@@ -373,14 +440,26 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--glass-border),
+    rgba(255, 255, 255, 0.2),
     transparent
   );
 }
 
-/* Glow effect utility */
-[data-style="glassmorphism"] .glow {
-  box-shadow:
-    0 0 20px rgba(139, 92, 246, 0.3),
-    0 0 40px rgba(236, 72, 153, 0.2);
+/* Links */
+[data-style="glassmorphism"] .link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+[data-style="glassmorphism"] .link:hover {
+  opacity: 0.8;
+}
+
+/* Header styling */
+[data-style="glassmorphism"] header {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--card-backdrop);
+  -webkit-backdrop-filter: var(--card-backdrop);
+  border-bottom: 1px solid var(--glass-border) !important;
 }
