@@ -73,6 +73,8 @@ export interface ExpenseCategory {
   value: number;
   percentage: number;
   color: string;
+  /** Index signature required for Recharts compatibility */
+  [key: string]: string | number;
 }
 
 /**
