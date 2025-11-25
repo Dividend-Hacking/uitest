@@ -1,0 +1,364 @@
+/**
+ * Minimal Bauhaus Theme
+ *
+ * A fusion of minimalist aesthetics and Bauhaus design principles.
+ * Features a clean grayscale foundation with bold Bauhaus primary colors
+ * (blue, red, yellow) used strategically as accents. Combines minimalist
+ * whitespace and subtle styling with Bauhaus geometric structure.
+ *
+ * Key characteristics:
+ * - Grayscale base palette for backgrounds and text
+ * - Bauhaus primary colors (blue, red, yellow) for accents only
+ * - Sharp corners for structural elements (cards, tables)
+ * - Subtle radius for interactive elements (buttons, badges, inputs)
+ * - Clean typography with uppercase labels (Bauhaus influence)
+ * - Minimal shadows with colored accent borders
+ */
+
+/* ========================================
+   LIGHT MODE - Minimal Bauhaus
+   ======================================== */
+[data-style="minimal-bauhaus"] {
+  /* Grayscale foundation (from minimalist) */
+  --mb-black: #1a1a1a;
+  --mb-dark: #333333;
+  --mb-medium: #666666;
+  --mb-light: #999999;
+  --mb-lighter: #CCCCCC;
+
+  /* Bauhaus accent colors */
+  --mb-blue: #1E3A8A;
+  --mb-red: #DC2626;
+  --mb-yellow: #FBBF24;
+
+  /* Background colors - clean whites and light grays */
+  --background: #FFFFFF;
+  --background-secondary: #FAFAFA;
+  --background-tertiary: #F5F5F5;
+
+  /* Text colors - grayscale hierarchy */
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+
+  /* Card styling - sharp corners with blue accent */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #EEEEEE;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-radius: 0;
+  --card-accent: var(--mb-blue);
+
+  /* Interactive states */
+  --hover-overlay: rgba(0, 0, 0, 0.02);
+  --active-overlay: rgba(30, 58, 138, 0.06);
+
+  /* Border colors */
+  --border-color: #EEEEEE;
+  --border-color-strong: #DDDDDD;
+
+  /* Status colors - using Bauhaus palette */
+  --success: #16A34A;
+  --success-bg: rgba(22, 163, 74, 0.08);
+  --warning: #FBBF24;
+  --warning-bg: rgba(251, 191, 36, 0.08);
+  --error: #DC2626;
+  --error-bg: rgba(220, 38, 38, 0.08);
+  --info: #1E3A8A;
+  --info-bg: rgba(30, 58, 138, 0.08);
+
+  /* Sidebar - clean with blue accent */
+  --sidebar-background: #FAFAFA;
+  --sidebar-item-hover: rgba(0, 0, 0, 0.03);
+  --sidebar-item-active: rgba(30, 58, 138, 0.08);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--mb-blue);
+
+  /* Charts - Bauhaus primary colors */
+  --chart-1: var(--mb-blue);
+  --chart-2: var(--mb-red);
+  --chart-3: var(--mb-yellow);
+  --chart-4: #374151;
+  --chart-5: #6B7280;
+  --chart-grid: #F0F0F0;
+
+  /* Typography - minimalist weights with Bauhaus uppercase */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --letter-spacing: 0.01em;
+  --letter-spacing-label: 0.05em;
+}
+
+/* ========================================
+   DARK MODE - Minimal Bauhaus
+   ======================================== */
+[data-style="minimal-bauhaus"][data-theme="dark"] {
+  /* Background colors - deep darks */
+  --background: #111111;
+  --background-secondary: #1A1A1A;
+  --background-tertiary: #222222;
+
+  /* Text colors - light grays */
+  --text-primary: #FAFAFA;
+  --text-secondary: #AAAAAA;
+  --text-tertiary: #777777;
+
+  /* Card styling - dark with blue accent */
+  --card-background: #1A1A1A;
+  --card-border: 1px solid #2A2A2A;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Border colors */
+  --border-color: #2A2A2A;
+  --border-color-strong: #3A3A3A;
+
+  /* Interactive states */
+  --hover-overlay: rgba(255, 255, 255, 0.03);
+  --active-overlay: rgba(30, 58, 138, 0.12);
+
+  /* Sidebar */
+  --sidebar-background: #1A1A1A;
+
+  /* Status backgrounds - darker variants */
+  --success-bg: rgba(22, 163, 74, 0.12);
+  --warning-bg: rgba(251, 191, 36, 0.12);
+  --error-bg: rgba(220, 38, 38, 0.12);
+  --info-bg: rgba(30, 58, 138, 0.12);
+
+  /* Charts */
+  --chart-grid: #2A2A2A;
+}
+
+/* ========================================
+   COMPONENT STYLES - Minimal Bauhaus
+   ======================================== */
+
+/* Cards - sharp corners with colored top accent border */
+[data-style="minimal-bauhaus"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border-top: 2px solid var(--card-accent);
+  transition: box-shadow 0.2s ease;
+}
+
+[data-style="minimal-bauhaus"] .card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Stats cards - sharp with blue accent and uppercase label */
+[data-style="minimal-bauhaus"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  border-top: 2px solid var(--mb-blue);
+  padding: 24px;
+}
+
+[data-style="minimal-bauhaus"] .stats-card .value {
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+[data-style="minimal-bauhaus"] .stats-card .label {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-label);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Buttons - Bauhaus blue primary with subtle radius */
+[data-style="minimal-bauhaus"] .btn-primary {
+  background: var(--mb-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: background 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .btn-primary:hover {
+  background: #1e40af;
+}
+
+[data-style="minimal-bauhaus"] .btn-secondary {
+  background: transparent;
+  color: var(--mb-blue);
+  border: 1px solid var(--border-color-strong);
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .btn-secondary:hover {
+  background: var(--hover-overlay);
+  border-color: var(--mb-blue);
+}
+
+/* Badge styles - subtle radius with Bauhaus color variants */
+[data-style="minimal-bauhaus"] .badge {
+  background: var(--info-bg);
+  color: var(--mb-blue);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+[data-style="minimal-bauhaus"] .badge-success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+[data-style="minimal-bauhaus"] .badge-warning {
+  background: var(--warning-bg);
+  color: #92400E;
+}
+
+[data-style="minimal-bauhaus"][data-theme="dark"] .badge-warning {
+  color: var(--warning);
+}
+
+[data-style="minimal-bauhaus"] .badge-error {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+/* Table styling - sharp with blue header accent */
+[data-style="minimal-bauhaus"] .table-header {
+  background: transparent;
+  border-bottom: 2px solid var(--mb-blue);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-medium);
+}
+
+[data-style="minimal-bauhaus"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-style="minimal-bauhaus"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="minimal-bauhaus"] .table-row:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar item styles - clean with colored accents */
+[data-style="minimal-bauhaus"] .sidebar-item {
+  border-radius: 0;
+  font-weight: var(--font-weight-normal);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: background 0.15s ease;
+  border-left: 3px solid transparent;
+}
+
+[data-style="minimal-bauhaus"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  border-left-color: var(--mb-yellow);
+}
+
+[data-style="minimal-bauhaus"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  font-weight: var(--font-weight-medium);
+  border-left-color: var(--mb-blue);
+}
+
+/* Input fields - subtle radius with blue focus */
+[data-style="minimal-bauhaus"] .input {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .input:focus {
+  border-color: var(--mb-blue);
+  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.1);
+  outline: none;
+}
+
+/* Dividers - thin with optional color accent */
+[data-style="minimal-bauhaus"] .divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+[data-style="minimal-bauhaus"] .divider-accent {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--mb-blue) 33%,
+    var(--mb-red) 33%,
+    var(--mb-red) 66%,
+    var(--mb-yellow) 66%
+  );
+}
+
+/* Links - blue accent color */
+[data-style="minimal-bauhaus"] .link {
+  color: var(--mb-blue);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+[data-style="minimal-bauhaus"] .link:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar styling - minimal */
+[data-style="minimal-bauhaus"] ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+[data-style="minimal-bauhaus"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-style="minimal-bauhaus"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color-strong);
+  border-radius: 3px;
+}
+
+[data-style="minimal-bauhaus"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--mb-blue);
+}
+
+/* Focus states - blue outline */
+[data-style="minimal-bauhaus"] *:focus-visible {
+  outline: 2px solid var(--mb-blue);
+  outline-offset: 2px;
+}
+
+/* Geometric decorations (optional utility classes) */
+[data-style="minimal-bauhaus"] .accent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mb-red);
+}
+
+[data-style="minimal-bauhaus"] .accent-square {
+  width: 8px;
+  height: 8px;
+  background: var(--mb-yellow);
+}
+
+[data-style="minimal-bauhaus"] .accent-line {
+  width: 24px;
+  height: 2px;
+  background: var(--mb-blue);
+}

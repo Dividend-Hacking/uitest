@@ -166,6 +166,18 @@ export const STYLES: StyleDefinition[] = [
       background: '#f0f4f8',
     },
   },
+  {
+    slug: 'minimal-bauhaus',
+    name: 'Minimal Bauhaus',
+    description: 'Clean minimalist foundation with Bauhaus primary color accents',
+    characteristics: ['clean', 'geometric', 'functional', 'accented'],
+    colors: {
+      primary: '#1a1a1a',
+      secondary: '#666666',
+      accent: '#1E3A8A',
+      background: '#FFFFFF',
+    },
+  },
 ];
 
 /**

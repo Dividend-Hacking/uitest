@@ -20,6 +20,7 @@
 @import "../styles/themes/illustrative.css";
 @import "../styles/themes/monochromatic.css";
 @import "../styles/themes/monochromatic-blue.css";
+@import "../styles/themes/minimal-bauhaus.css";
 
 /* Base root variables - defaults before any theme is applied */
 :root {
