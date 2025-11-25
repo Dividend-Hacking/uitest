@@ -102,6 +102,9 @@
   --text-secondary: #AAAAAA;
   --text-tertiary: #777777;
 
+  /* Foreground for body text */
+  --foreground: #FAFAFA;
+
   /* Card styling - dark with blue accent */
   --card-background: #1A1A1A;
   --card-border: 1px solid #2A2A2A;
@@ -117,12 +120,14 @@
 
   /* Sidebar */
   --sidebar-background: #1A1A1A;
+  --sidebar-item-hover: rgba(255, 255, 255, 0.05);
+  --sidebar-item-active: rgba(30, 58, 138, 0.15);
 
   /* Status backgrounds - darker variants */
-  --success-bg: rgba(22, 163, 74, 0.12);
-  --warning-bg: rgba(251, 191, 36, 0.12);
-  --error-bg: rgba(220, 38, 38, 0.12);
-  --info-bg: rgba(30, 58, 138, 0.12);
+  --success-bg: rgba(22, 163, 74, 0.15);
+  --warning-bg: rgba(251, 191, 36, 0.15);
+  --error-bg: rgba(220, 38, 38, 0.15);
+  --info-bg: rgba(30, 58, 138, 0.15);
 
   /* Charts */
   --chart-grid: #2A2A2A;
@@ -144,6 +149,10 @@
 
 [data-style="minimal-bauhaus"] .card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-style="minimal-bauhaus"][data-theme="dark"] .card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Stats cards - sharp with blue accent and uppercase label */

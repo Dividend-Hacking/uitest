@@ -44,10 +44,11 @@ const STYLE_ICONS: Record<string, React.ComponentType<{ className?: string }>> =
   illustrative: PaintBrushIcon,
   monochromatic: StopIcon,
   'monochromatic-blue': SwatchIcon,
+  'minimal-bauhaus': Squares2X2Icon,
 };
 
 /**
- * Sidebar provides navigation between all 11 dashboard styles.
+ * Sidebar provides navigation between all 12 dashboard styles.
  * Displays style names with icons and highlights the active style.
  */
 export function Sidebar() {
@@ -146,7 +147,7 @@ export function Sidebar() {
       {/* Footer Section */}
       <div className="px-4 py-4 border-t border-[var(--border-color)]">
         <div className="text-xs text-[var(--text-tertiary)]">
-          <p className="mb-1">11 unique styles</p>
+          <p className="mb-1">12 unique styles</p>
           <p>Light & Dark modes</p>
         </div>
       </div>
