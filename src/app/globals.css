@@ -19,6 +19,7 @@
 @import "../styles/themes/glassmorphism.css";
 @import "../styles/themes/illustrative.css";
 @import "../styles/themes/monochromatic.css";
+@import "../styles/themes/monochromatic-blue.css";
 
 /* Base root variables - defaults before any theme is applied */
 :root {

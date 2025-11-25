@@ -154,6 +154,18 @@ export const STYLES: StyleDefinition[] = [
       background: '#FFFFFF',
     },
   },
+  {
+    slug: 'monochromatic-blue',
+    name: 'Monochromatic Blue',
+    description: 'Navy blue palette, professional depth, single-hue elegance',
+    characteristics: ['navy', 'professional', 'single-hue', 'sophisticated'],
+    colors: {
+      primary: '#1e3a5f',
+      secondary: '#4a6fa5',
+      accent: '#7ba3d4',
+      background: '#f0f4f8',
+    },
+  },
 ];
 
 /**

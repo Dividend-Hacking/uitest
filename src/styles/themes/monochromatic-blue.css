@@ -1,0 +1,320 @@
+/**
+ * Monochromatic Blue Theme
+ *
+ * A single-hue theme using only shades of navy blue.
+ * Characterized by professional depth, sophisticated aesthetics,
+ * and a cohesive blue palette that creates a calm, focused environment.
+ */
+
+/* ========================================
+   LIGHT MODE - Monochromatic Blue
+   ======================================== */
+[data-style="monochromatic-blue"] {
+  /* Navy blue palette - darkest to lightest */
+  --blue-darkest: #0d1a26;
+  --blue-darker: #152535;
+  --blue-dark: #1e3a5f;
+  --blue-medium: #3d5a80;
+  --blue-light: #6b8cae;
+  --blue-lighter: #a8c0d8;
+  --blue-lightest: #d1dce8;
+
+  /* Background colors - light blue-grays */
+  --background: #f0f4f8;
+  --background-secondary: #e1e8f0;
+  --background-tertiary: #d1dce8;
+
+  /* Text colors - navy shades */
+  --text-primary: #1e3a5f;
+  --text-secondary: #3d5a80;
+  --text-tertiary: #6b8cae;
+
+  /* Card styling - clean with blue-tinted shadows */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #c5d5e8;
+  --card-shadow: 0 2px 4px rgba(30, 58, 95, 0.08);
+  --card-radius: 8px;
+
+  /* Interactive states */
+  --hover-overlay: rgba(30, 58, 95, 0.06);
+  --active-overlay: rgba(30, 58, 95, 0.12);
+
+  /* Border colors */
+  --border-color: #c5d5e8;
+  --border-color-strong: #a8c0d8;
+
+  /* Status colors - all blue shades */
+  --success: #3d5a80;
+  --success-bg: rgba(61, 90, 128, 0.10);
+  --warning: #6b8cae;
+  --warning-bg: rgba(107, 140, 174, 0.10);
+  --error: #1e3a5f;
+  --error-bg: rgba(30, 58, 95, 0.10);
+  --info: #4a6fa5;
+  --info-bg: rgba(74, 111, 165, 0.10);
+
+  /* Sidebar */
+  --sidebar-background: #e1e8f0;
+  --sidebar-item-hover: rgba(30, 58, 95, 0.06);
+  --sidebar-item-active: rgba(30, 58, 95, 0.15);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--blue-dark);
+
+  /* Charts - 5 distinct blue values */
+  --chart-1: #1e3a5f;
+  --chart-2: #3d5a80;
+  --chart-3: #6b8cae;
+  --chart-4: #a8c0d8;
+  --chart-5: #d1dce8;
+  --chart-grid: #e1e8f0;
+
+  /* Typography */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --letter-spacing: 0.01em;
+}
+
+/* ========================================
+   DARK MODE - Monochromatic Blue
+   ======================================== */
+[data-style="monochromatic-blue"][data-theme="dark"] {
+  /* Background colors - deep navy */
+  --background: #0d1a26;
+  --background-secondary: #152535;
+  --background-tertiary: #1e3245;
+
+  /* Text colors - light blues */
+  --text-primary: #e1e8f0;
+  --text-secondary: #a8c0d8;
+  --text-tertiary: #7ba3d4;
+
+  /* Card styling */
+  --card-background: #152535;
+  --card-border: 1px solid #2a4560;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Border colors */
+  --border-color: #2a4560;
+  --border-color-strong: #3d5a80;
+
+  /* Interactive states */
+  --hover-overlay: rgba(168, 192, 216, 0.06);
+  --active-overlay: rgba(168, 192, 216, 0.12);
+
+  /* Status colors - lighter blues for dark mode */
+  --success: #a8c0d8;
+  --success-bg: rgba(168, 192, 216, 0.15);
+  --warning: #7ba3d4;
+  --warning-bg: rgba(123, 163, 212, 0.15);
+  --error: #d1dce8;
+  --error-bg: rgba(209, 220, 232, 0.15);
+  --info: #a8c0d8;
+  --info-bg: rgba(168, 192, 216, 0.15);
+
+  /* Sidebar */
+  --sidebar-background: #152535;
+  --sidebar-item-active: rgba(168, 192, 216, 0.15);
+  --sidebar-text-active: #e1e8f0;
+
+  /* Charts - inverted for dark mode */
+  --chart-1: #e1e8f0;
+  --chart-2: #a8c0d8;
+  --chart-3: #7ba3d4;
+  --chart-4: #4a6fa5;
+  --chart-5: #3d5a80;
+  --chart-grid: #2a4560;
+}
+
+/* ========================================
+   COMPONENT STYLES - Monochromatic Blue
+   ======================================== */
+
+/* Cards - clean and elegant with blue tint */
+[data-style="monochromatic-blue"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+[data-style="monochromatic-blue"] .card:hover {
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.12);
+}
+
+[data-style="monochromatic-blue"][data-theme="dark"] .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Stats cards */
+[data-style="monochromatic-blue"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+[data-style="monochromatic-blue"] .stats-card .value {
+  font-size: 32px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+[data-style="monochromatic-blue"] .stats-card .label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Buttons - navy blue */
+[data-style="monochromatic-blue"] .btn-primary {
+  background: var(--blue-dark);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing);
+  transition: opacity 0.2s ease;
+}
+
+[data-style="monochromatic-blue"][data-theme="dark"] .btn-primary {
+  background: var(--blue-lighter);
+  color: var(--blue-darkest);
+}
+
+[data-style="monochromatic-blue"] .btn-primary:hover {
+  opacity: 0.85;
+}
+
+[data-style="monochromatic-blue"] .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-strong);
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  transition: background 0.2s ease;
+}
+
+[data-style="monochromatic-blue"] .btn-secondary:hover {
+  background: var(--hover-overlay);
+}
+
+/* Badge styles */
+[data-style="monochromatic-blue"] .badge {
+  background: var(--background-tertiary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+/* Table styling */
+[data-style="monochromatic-blue"] .table-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color-strong);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+[data-style="monochromatic-blue"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-style="monochromatic-blue"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="monochromatic-blue"] .table-row:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar item styles */
+[data-style="monochromatic-blue"] .sidebar-item {
+  border-radius: 6px;
+  font-weight: var(--font-weight-normal);
+  transition: background 0.15s ease;
+}
+
+[data-style="monochromatic-blue"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+}
+
+[data-style="monochromatic-blue"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Input fields */
+[data-style="monochromatic-blue"] .input {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+[data-style="monochromatic-blue"] .input:focus {
+  border-color: var(--blue-medium);
+  outline: none;
+}
+
+[data-style="monochromatic-blue"][data-theme="dark"] .input:focus {
+  border-color: var(--blue-lighter);
+}
+
+/* Dividers */
+[data-style="monochromatic-blue"] .divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Links - navy with underline */
+[data-style="monochromatic-blue"] .link {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s ease;
+}
+
+[data-style="monochromatic-blue"][data-theme="dark"] .link {
+  color: var(--blue-lighter);
+}
+
+[data-style="monochromatic-blue"] .link:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar styling */
+[data-style="monochromatic-blue"] ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+[data-style="monochromatic-blue"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-style="monochromatic-blue"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color-strong);
+  border-radius: 3px;
+}
+
+[data-style="monochromatic-blue"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-medium);
+}
+
+/* Focus states - blue ring */
+[data-style="monochromatic-blue"] *:focus-visible {
+  outline: 2px solid var(--blue-medium);
+  outline-offset: 2px;
+}
+
+[data-style="monochromatic-blue"][data-theme="dark"] *:focus-visible {
+  outline: 2px solid var(--blue-lighter);
+}
