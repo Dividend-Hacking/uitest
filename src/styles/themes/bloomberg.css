@@ -1,0 +1,437 @@
+/**
+ * Bloomberg Theme
+ *
+ * A terminal-style theme inspired by Bloomberg financial data terminals.
+ * Characterized by black backgrounds, orange accents, green data values,
+ * monospace fonts throughout, and sharp corners. This theme creates a
+ * professional, data-dense, utilitarian interface.
+ */
+
+/* ========================================
+   LIGHT MODE - Bloomberg
+   ======================================== */
+[data-style="bloomberg"] {
+  /* Core Bloomberg colors */
+  --bloomberg-black: #000000;
+  --bloomberg-dark: #121212;
+  --bloomberg-charcoal: #1a1a1a;
+  --bloomberg-orange: #FF6600;
+  --bloomberg-amber: #FFCC00;
+  --bloomberg-green: #00FF00;
+  --bloomberg-red: #FF3333;
+  --bloomberg-white: #FFFFFF;
+  --bloomberg-gray: #888888;
+  --bloomberg-light-gray: #CCCCCC;
+
+  /* Background colors - light mode */
+  --background: #F5F5F5;
+  --background-secondary: #E8E8E8;
+  --background-tertiary: #DDDDDD;
+
+  /* Text colors */
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+
+  /* Card styling */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #000000;
+  --card-shadow: none;
+  --card-radius: 0;
+
+  /* Border colors */
+  --border-color: #000000;
+  --border-color-strong: #000000;
+
+  /* Status colors */
+  --success: #00AA00;
+  --success-bg: rgba(0, 170, 0, 0.1);
+  --warning: #FF9900;
+  --warning-bg: rgba(255, 153, 0, 0.1);
+  --error: #CC0000;
+  --error-bg: rgba(204, 0, 0, 0.1);
+  --info: #FF6600;
+  --info-bg: rgba(255, 102, 0, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: #FFFFFF;
+  --sidebar-item-hover: rgba(255, 102, 0, 0.1);
+  --sidebar-item-active: var(--bloomberg-orange);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: #FFFFFF;
+
+  /* Charts */
+  --chart-1: #FF6600;
+  --chart-2: #00AA00;
+  --chart-3: #FFCC00;
+  --chart-4: #0088CC;
+  --chart-5: #CC0000;
+  --chart-grid: rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   DARK MODE - Bloomberg (Primary Mode)
+   This is the authentic Bloomberg terminal look
+   ======================================== */
+[data-style="bloomberg"][data-theme="dark"] {
+  /* Background colors - true terminal black */
+  --background: #000000;
+  --background-secondary: #121212;
+  --background-tertiary: #1a1a1a;
+
+  /* Text colors - high contrast */
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-tertiary: #888888;
+
+  /* Card styling - terminal aesthetic */
+  --card-background: #121212;
+  --card-border: 1px solid #FF6600;
+  --card-shadow: none;
+
+  /* Border colors */
+  --border-color: #333333;
+  --border-color-strong: #FF6600;
+
+  /* Status colors - bright for visibility */
+  --success: #00FF00;
+  --success-bg: rgba(0, 255, 0, 0.1);
+  --warning: #FFCC00;
+  --warning-bg: rgba(255, 204, 0, 0.1);
+  --error: #FF3333;
+  --error-bg: rgba(255, 51, 51, 0.1);
+  --info: #FF6600;
+  --info-bg: rgba(255, 102, 0, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: #000000;
+  --sidebar-item-hover: rgba(255, 102, 0, 0.2);
+  --sidebar-text: #CCCCCC;
+  --sidebar-text-active: #000000;
+
+  /* Charts - Bloomberg palette */
+  --chart-1: #FF6600;
+  --chart-2: #00FF00;
+  --chart-3: #FFCC00;
+  --chart-4: #00CCFF;
+  --chart-5: #FF3333;
+  --chart-grid: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   COMPONENT STYLES - Bloomberg
+   ======================================== */
+
+/* Cards - terminal style with orange accents */
+[data-style="bloomberg"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-style="bloomberg"][data-theme="dark"] .card {
+  border: 1px solid #333333;
+  border-top: 2px solid var(--bloomberg-orange);
+}
+
+[data-style="bloomberg"] .card:hover {
+  border-color: var(--bloomberg-orange);
+}
+
+/* Stats cards with Bloomberg terminal styling */
+[data-style="bloomberg"] .stats-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  position: relative;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-style="bloomberg"][data-theme="dark"] .stats-card {
+  border-left: 3px solid var(--bloomberg-orange);
+}
+
+/* Stats card value styling - green terminal numbers */
+[data-style="bloomberg"] .stats-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  letter-spacing: -0.02em;
+}
+
+[data-style="bloomberg"][data-theme="dark"] .stats-card .value {
+  color: var(--bloomberg-green);
+}
+
+/* Different accent colors for each stats card */
+[data-style="bloomberg"][data-theme="dark"] .stats-card:nth-child(1) {
+  border-left-color: var(--bloomberg-orange);
+}
+
+[data-style="bloomberg"][data-theme="dark"] .stats-card:nth-child(2) {
+  border-left-color: var(--bloomberg-green);
+}
+
+[data-style="bloomberg"][data-theme="dark"] .stats-card:nth-child(3) {
+  border-left-color: var(--bloomberg-amber);
+}
+
+[data-style="bloomberg"][data-theme="dark"] .stats-card:nth-child(4) {
+  border-left-color: #00CCFF;
+}
+
+/* Buttons - Bloomberg orange style */
+[data-style="bloomberg"] .btn-primary {
+  background: var(--bloomberg-orange);
+  color: #000000;
+  border: none;
+  border-radius: 0;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+[data-style="bloomberg"] .btn-primary:hover {
+  background: var(--bloomberg-amber);
+}
+
+[data-style="bloomberg"] .btn-secondary {
+  background: transparent;
+  color: var(--bloomberg-orange);
+  border: 1px solid var(--bloomberg-orange);
+  border-radius: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+[data-style="bloomberg"] .btn-secondary:hover {
+  background: rgba(255, 102, 0, 0.1);
+}
+
+[data-style="bloomberg"] .btn-danger,
+[data-style="bloomberg"] .btn-error {
+  background: var(--bloomberg-red);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  text-transform: uppercase;
+}
+
+[data-style="bloomberg"] .btn-warning {
+  background: var(--bloomberg-amber);
+  color: #000000;
+  border: none;
+  border-radius: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  text-transform: uppercase;
+}
+
+/* Badge styles - terminal aesthetic */
+[data-style="bloomberg"] .badge {
+  background: transparent;
+  color: var(--bloomberg-orange);
+  border: 1px solid var(--bloomberg-orange);
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-style="bloomberg"] .badge-success {
+  color: var(--success);
+  border-color: var(--success);
+}
+
+[data-style="bloomberg"] .badge-error {
+  color: var(--error);
+  border-color: var(--error);
+}
+
+[data-style="bloomberg"] .badge-warning {
+  color: var(--warning);
+  border-color: var(--warning);
+}
+
+/* Table styling - data grid look */
+[data-style="bloomberg"] .table-header {
+  background: var(--background-secondary);
+  border-bottom: 2px solid var(--bloomberg-orange);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+}
+
+[data-style="bloomberg"][data-theme="dark"] .table-header {
+  background: #1a1a1a;
+  color: var(--bloomberg-orange);
+}
+
+[data-style="bloomberg"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+}
+
+[data-style="bloomberg"] .table-row:hover {
+  background: rgba(255, 102, 0, 0.05);
+}
+
+[data-style="bloomberg"][data-theme="dark"] .table-row:hover {
+  background: rgba(255, 102, 0, 0.1);
+}
+
+/* Sidebar styling - terminal navigation */
+[data-style="bloomberg"] .sidebar {
+  background: var(--sidebar-background);
+  border-right: 1px solid var(--border-color);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-style="bloomberg"][data-theme="dark"] .sidebar {
+  border-right: 1px solid #333333;
+}
+
+[data-style="bloomberg"] .sidebar-item {
+  border-radius: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[data-style="bloomberg"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+  color: var(--bloomberg-orange);
+}
+
+[data-style="bloomberg"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+}
+
+/* Input fields - terminal style */
+[data-style="bloomberg"] .input {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-style="bloomberg"][data-theme="dark"] .input {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: var(--text-primary);
+}
+
+[data-style="bloomberg"] .input:focus {
+  border-color: var(--bloomberg-orange);
+  outline: none;
+}
+
+[data-style="bloomberg"] .input::placeholder {
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Links - orange accents */
+[data-style="bloomberg"] .link {
+  color: var(--bloomberg-orange);
+  text-decoration: none;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-style="bloomberg"] .link:hover {
+  color: var(--bloomberg-amber);
+  text-decoration: underline;
+}
+
+/* Dividers */
+[data-style="bloomberg"] .divider {
+  border-color: var(--border-color);
+}
+
+[data-style="bloomberg"] .divider-accent {
+  border-color: var(--bloomberg-orange);
+}
+
+/* Headings - terminal style */
+[data-style="bloomberg"] h1,
+[data-style="bloomberg"] h2,
+[data-style="bloomberg"] h3 {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[data-style="bloomberg"][data-theme="dark"] h1,
+[data-style="bloomberg"][data-theme="dark"] h2 {
+  color: var(--text-primary);
+}
+
+/* Scrollbar styling - minimal */
+[data-style="bloomberg"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-style="bloomberg"] ::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+[data-style="bloomberg"] ::-webkit-scrollbar-thumb {
+  background: var(--bloomberg-orange);
+  border-radius: 0;
+}
+
+[data-style="bloomberg"][data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+[data-style="bloomberg"][data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+[data-style="bloomberg"][data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--bloomberg-orange);
+}
+
+/* Focus states */
+[data-style="bloomberg"] *:focus-visible {
+  outline: 2px solid var(--bloomberg-orange);
+  outline-offset: 1px;
+}
+
+/* Terminal cursor effect for active elements */
+[data-style="bloomberg"][data-theme="dark"] .stats-card .label {
+  color: var(--bloomberg-orange);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* Data highlight utility - for positive/negative values */
+[data-style="bloomberg"] .data-positive {
+  color: var(--bloomberg-green);
+}
+
+[data-style="bloomberg"] .data-negative {
+  color: var(--bloomberg-red);
+}
+
+[data-style="bloomberg"] .data-highlight {
+  color: var(--bloomberg-amber);
+}

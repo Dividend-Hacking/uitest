@@ -178,6 +178,18 @@ export const STYLES: StyleDefinition[] = [
       background: '#FFFFFF',
     },
   },
+  {
+    slug: 'bloomberg',
+    name: 'Bloomberg',
+    description: 'Terminal-style interface inspired by financial data terminals',
+    characteristics: ['terminal', 'monospace', 'data-dense', 'professional'],
+    colors: {
+      primary: '#FF6600',
+      secondary: '#00FF00',
+      accent: '#FFCC00',
+      background: '#000000',
+    },
+  },
 ];
 
 /**
