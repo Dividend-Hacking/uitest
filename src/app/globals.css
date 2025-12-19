@@ -22,6 +22,7 @@
 @import "../styles/themes/monochromatic-blue.css";
 @import "../styles/themes/minimal-bauhaus.css";
 @import "../styles/themes/bloomberg.css";
+@import "../styles/themes/notion.css";
 
 /* Base root variables - defaults before any theme is applied */
 :root {

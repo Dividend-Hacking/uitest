@@ -1,0 +1,327 @@
+/**
+ * Notion Theme
+ *
+ * A clean, minimal interface inspired by the popular Notion note-taking app.
+ * Characterized by ultra-minimal shadows, subtle borders, and a content-first
+ * approach. Features a muted color palette with blue accents and colored
+ * status badges. Both light and dark modes maintain Notion's signature clean aesthetic.
+ */
+
+/* ========================================
+   LIGHT MODE - Notion
+   ======================================== */
+[data-style="notion"] {
+  /* Primary colors - Notion's signature palette */
+  --notion-text: #37352F;
+  --notion-text-light: #787774;
+  --notion-text-lighter: #9B9A97;
+  --notion-blue: #2383E2;
+  --notion-blue-light: #E7F3FF;
+  --notion-gray: #E9E9E7;
+  --notion-gray-light: #F7F6F3;
+
+  /* Background colors */
+  --background: #FFFFFF;
+  --background-secondary: #F7F6F3;
+  --background-tertiary: #EEEEEC;
+
+  /* Text colors */
+  --text-primary: #37352F;
+  --text-secondary: #787774;
+  --text-tertiary: #9B9A97;
+
+  /* Card styling - ultra minimal */
+  --card-background: #FFFFFF;
+  --card-border: 1px solid #E9E9E7;
+  --card-shadow: none;
+  --card-radius: 4px;
+
+  /* Interactive states */
+  --hover-overlay: rgba(55, 53, 47, 0.04);
+  --active-overlay: rgba(35, 131, 226, 0.08);
+
+  /* Border colors */
+  --border-color: #E9E9E7;
+  --border-color-strong: #DBDBD8;
+
+  /* Status colors - Notion's muted palette */
+  --success: #448361;
+  --success-bg: rgba(68, 131, 97, 0.1);
+  --warning: #CB912F;
+  --warning-bg: rgba(203, 145, 47, 0.1);
+  --error: #E03E3E;
+  --error-bg: rgba(224, 62, 62, 0.1);
+  --info: #2383E2;
+  --info-bg: rgba(35, 131, 226, 0.1);
+
+  /* Sidebar */
+  --sidebar-background: #F7F6F3;
+  --sidebar-item-hover: rgba(55, 53, 47, 0.04);
+  --sidebar-item-active: rgba(35, 131, 226, 0.08);
+  --sidebar-text: var(--text-secondary);
+  --sidebar-text-active: var(--notion-text);
+
+  /* Charts - Notion-inspired muted palette */
+  --chart-1: #2383E2;
+  --chart-2: #448361;
+  --chart-3: #CB912F;
+  --chart-4: #9065B0;
+  --chart-5: #E03E3E;
+  --chart-grid: #E9E9E7;
+
+  /* Typography */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --letter-spacing: -0.01em;
+}
+
+/* ========================================
+   DARK MODE - Notion
+   ======================================== */
+[data-style="notion"][data-theme="dark"] {
+  /* Notion dark mode colors */
+  --notion-text: #FFFFFFCF;
+  --notion-text-light: #FFFFFF8F;
+  --notion-text-lighter: #FFFFFF5F;
+  --notion-blue: #529CCA;
+  --notion-blue-light: rgba(82, 156, 202, 0.15);
+  --notion-gray: #373737;
+  --notion-gray-light: #252525;
+
+  /* Background colors */
+  --background: #191919;
+  --background-secondary: #202020;
+  --background-tertiary: #2F2F2F;
+
+  /* Text colors */
+  --text-primary: #FFFFFFCF;
+  --text-secondary: #FFFFFF8F;
+  --text-tertiary: #FFFFFF5F;
+
+  /* Card styling */
+  --card-background: #202020;
+  --card-border: 1px solid #373737;
+  --card-shadow: none;
+
+  /* Border colors */
+  --border-color: #373737;
+  --border-color-strong: #4A4A4A;
+
+  /* Interactive states */
+  --hover-overlay: rgba(255, 255, 255, 0.04);
+  --active-overlay: rgba(82, 156, 202, 0.12);
+
+  /* Status colors - brighter for dark mode */
+  --success: #4DAB9A;
+  --success-bg: rgba(77, 171, 154, 0.15);
+  --warning: #E9B44C;
+  --warning-bg: rgba(233, 180, 76, 0.15);
+  --error: #EB5757;
+  --error-bg: rgba(235, 87, 87, 0.15);
+  --info: #529CCA;
+  --info-bg: rgba(82, 156, 202, 0.15);
+
+  /* Sidebar */
+  --sidebar-background: #202020;
+
+  /* Charts */
+  --chart-grid: #373737;
+}
+
+/* ========================================
+   COMPONENT STYLES - Notion
+   ======================================== */
+
+/* Cards - ultra minimal, almost flat */
+[data-style="notion"] .card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: background 0.2s ease;
+}
+
+[data-style="notion"] .card:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="notion"][data-theme="dark"] .card:hover {
+  background: var(--background-tertiary);
+}
+
+/* Stats cards - clean and simple */
+[data-style="notion"] .stats-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 20px;
+}
+
+[data-style="notion"] .stats-card .value {
+  font-size: 28px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing);
+  color: var(--text-primary);
+}
+
+[data-style="notion"] .stats-card .label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Buttons - Notion style */
+[data-style="notion"] .btn-primary {
+  background: var(--notion-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+[data-style="notion"] .btn-primary:hover {
+  opacity: 0.85;
+}
+
+[data-style="notion"] .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-strong);
+  border-radius: 4px;
+  font-weight: var(--font-weight-medium);
+  transition: background 0.2s ease;
+}
+
+[data-style="notion"] .btn-secondary:hover {
+  background: var(--hover-overlay);
+}
+
+/* Badge styles - Notion's colored tags */
+[data-style="notion"] .badge {
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  padding: 2px 6px;
+}
+
+[data-style="notion"] .badge-success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+[data-style="notion"] .badge-warning {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+[data-style="notion"] .badge-error {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+[data-style="notion"] .badge-info {
+  background: var(--info-bg);
+  color: var(--info);
+}
+
+/* Table styling - clean horizontal lines */
+[data-style="notion"] .table-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color-strong);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+[data-style="notion"] .table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-style="notion"] .table-row:hover {
+  background: var(--hover-overlay);
+}
+
+[data-style="notion"] .table-row:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar item styles */
+[data-style="notion"] .sidebar-item {
+  border-radius: 4px;
+  font-weight: var(--font-weight-normal);
+  font-size: 14px;
+  transition: background 0.15s ease;
+  color: var(--text-secondary);
+}
+
+[data-style="notion"] .sidebar-item:hover {
+  background: var(--sidebar-item-hover);
+}
+
+[data-style="notion"] .sidebar-item-active {
+  background: var(--sidebar-item-active);
+  color: var(--sidebar-text-active);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Input fields */
+[data-style="notion"] .input {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--background);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-style="notion"] .input:focus {
+  border-color: var(--notion-blue);
+  box-shadow: 0 0 0 2px var(--notion-blue-light);
+  outline: none;
+}
+
+/* Dividers - subtle */
+[data-style="notion"] .divider {
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Links - blue accent */
+[data-style="notion"] .link {
+  color: var(--notion-blue);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+[data-style="notion"] .link:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar styling - minimal */
+[data-style="notion"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-style="notion"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-style="notion"] ::-webkit-scrollbar-thumb {
+  background: var(--border-color-strong);
+  border-radius: 4px;
+}
+
+[data-style="notion"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Focus states - blue ring */
+[data-style="notion"] *:focus-visible {
+  outline: 2px solid var(--notion-blue);
+  outline-offset: 2px;
+}

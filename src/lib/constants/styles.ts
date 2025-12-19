@@ -190,6 +190,18 @@ export const STYLES: StyleDefinition[] = [
       background: '#000000',
     },
   },
+  {
+    slug: 'notion',
+    name: 'Notion',
+    description: 'Clean, minimal interface inspired by the popular note-taking app',
+    characteristics: ['minimal', 'clean', 'content-focused', 'productive'],
+    colors: {
+      primary: '#37352F',
+      secondary: '#787774',
+      accent: '#2383E2',
+      background: '#FFFFFF',
+    },
+  },
 ];
 
 /**
